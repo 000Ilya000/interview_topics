@@ -1,0 +1,6 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "@types/react": "^19.1.11"
+  }
+}

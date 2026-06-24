@@ -1,52 +1,115 @@
-//!  Тема: Логические операторы js (||, ?? и т.д.) + сложные операторы (?. ||= ??= &&=)
-//  Тема: Виды и разница функций
-//  Тема: Виды и разница переменных
-//  Тема: методы массивов - какие мутирующие, какие не мутирующие
-//  Тема: контекст (this - call, apply, bind)
-//  Тема: structuredClone(bar) и someArr.at()
-//  Задачи: типовые задачи на массивы, строки и тд
-//  Тема: Иммутабельность js Object.freeze
-//  Тема: event loop
-//  Тема: Файлы деклараций типов (`*.d.ts`) ts js
-//  Тема: Прототипы js цепочка прототипов Object.getPrototypeOf
-//  Тема: TS - generic
-//  Тема: TS - utility types - что это, какие есть и что они делают
-//  Тема: TS - typeGuards - что и зачем
-//  Задачи: задачи интервью на TS
-//  Тема: Отличие классовых и функциональных компонентов
-//  Тема: Разница Redux и Redux Toolkit
-//  Задачи: React - типовые задачи на собеседованиях
-//  Тема: Препроцессоры (scss, less) и модульная стилизация React
-//  Тема: Redux thunks
-//  Тема: Промисы и их методы
-//  Тема: fetch запросы
-//  Тема: замыкание
-//  Тема: ООП (полиморфизм, инкапсуляция, наследование, абстракция)
-//  Паттерны проектирования(3 основных вида)
-//  Принцип SOLID
-//  REACT - виртуальный дом(оптимизация react)
+// =============================================================================
+//  EXPLORE TOPICS — карта всего курса (Senior Frontend, React/Next.js)
+//  Ежедневная работа: schedule/DAY_XX.md (20 рабочих дней)
+//  Старт: START_HERE.md
+// =============================================================================
 
-//  Тема: Мета-теги
-//  Тема: Чем отличается теги artcle от section
-//  Тема: Типы данных js
-//  Тема: Методы строк
-//  Тема: Типы данных - ссылочкая(например можем перезаписывать ключи у объектов) и тд.
-//  Тема: Концепции функционального программирования
-//  Тема: Декораторы JS
-//  React - все хуки, что они делают
-//  React - useRef, зачем нужен и как использовать + задачки
-//  Протоколы API
-//  WEB-сокеты React
+// ─── ПРИОРИТЕТЫ ───────────────────────────────────────────────────────────────
+//  🔴 JS → TS → React → Архитектура → Сеть/Браузер → Performance
+//  🟡 Next.js, Security, Паттерны
+//  ⚪ Алгоритмы > easy, глубокий FP/ООП, V8
 
-// Тема: Массивы - какие там типы данных, что такое коллекция
-// Тема: Методы some и every
-// Тема: MAP, SET, WeakMap и WeakSet - что они делают
-// Тема: Синхронная рекурсия и асинхронная рекурсия - что может заблакировать поток event loop
-// Тема: Иденпатентные запросы и ограничения по длине
-// Тема: заголовки запросов и cookie
-// Тема: React - useEffect и useLayoutEffect
-// Тема: React - usememo и useCallback
-// Тема: React - recansilation (ререндер по ключам)
-// Задачи: Типовые задачи useState, useEffect, useRef, useMemo в React
-// Тема: React - порталы
-// Тема: Оптимизация web - frontend, бандлеры, плагины для ми нификации и тд
+// =============================================================================
+//  НЕДЕЛЯ 1 (DAY 01–05) — HTML/CSS + JavaScript + Browser
+// =============================================================================
+
+//  DAY 01 — HTML/CSS + Event Loop
+//    theory/week1/htmlCssA11y.js, metaTags.html, browserInternals.js, eventLoop.js
+
+//  DAY 02 — Promises + Closures + Debounce/Throttle
+//    theory/week1/promiseChain.js, promiseObject.js, circuitFunction.js, debounceThrottle.js
+//    practice/handCoding/debounce.js, throttle.js
+
+//  DAY 03 — this + Prototypes + JS basics
+//    theory/week1/this.js, prototypes.js, dataTypes.js, operatorsTypes.js
+//    variables.js, functionsTypes.js, arrayMethods.js, distructure.js
+
+//  DAY 04 — Memory + Rendering + Collections
+//    theory/week1/memoryLeaks.js, renderingPipeline.js, arrayMapSetWeakMapWeakSet.js
+//    immutability.js, structuredCloneSomeArrAt.js
+//    practice/tasks-js/ ×2
+
+//  DAY 05 — Повторение W1 + EventEmitter
+//    practice/handCoding/eventEmitter.js
+//    переписать debounce/throttle из памяти
+
+// =============================================================================
+//  НЕДЕЛЯ 2 (DAY 06–10) — TypeScript + React
+// =============================================================================
+
+//  DAY 06 — TypeScript (весь блок)
+//    theory/week2/anyTypes.ts, typeGuards.ts, generics.tsx, utilityTypes.ts
+//    inferTypes.ts, conditionalTypes.ts, mappedTypes.ts, declorations.d.ts
+
+//  DAY 07 — Reconciliation + Fiber + Render Cycle
+//    theory/week2/reconciliation.jsx, fiber.jsx, renderCycle.jsx
+
+//  DAY 08 — Hooks + Memo + Extra Renders
+//    theory/week2/hooksOverview.jsx, useEffectUseLayoutEffect.jsx, useMemoUseCallback.jsx
+//    extraRenders.jsx
+//    practice/handCoding/useDebounce.jsx
+
+//  DAY 09 — Context + Concurrent + Patterns
+//    theory/week2/context.jsx, concurrentFeatures.jsx, advancedPatterns.jsx
+//    practice/handCoding/miniStateManager.js, practice/tasks-react/
+
+//  DAY 10 — Повторение W2 + Mock ×4
+
+// =============================================================================
+//  НЕДЕЛЯ 3 (DAY 11–15) — Next.js + Сеть + Security + Performance
+// =============================================================================
+
+//  DAY 11 — SSR/SSG/ISR + App Router + RSC
+//    theory/week3/renderingModes.jsx, hydration.jsx, appRouter.jsx, serverComponents.jsx
+
+//  DAY 12 — Streaming + HTTP + CORS + fetch
+//    theory/week3/streaming.jsx, routeHandlers.jsx, httpTls.js, fetchAPI.js, corsCookiesJwt.js
+//    practice/handCoding/miniReactQuery.js
+
+//  DAY 13 — Security + Web Vitals + Протоколы
+//    theory/week3/security.js, webVitals.js, protokols.js, websocketReact.jsx
+
+//  DAY 14 — Повторение W3 + Mock ×4
+//    Senior-вопрос: когда SSR ухудшает производительность?
+
+//  DAY 15 — Задачи + miniReactQuery из памяти
+//    practice/tasks-js/ ×3
+
+// =============================================================================
+//  НЕДЕЛЯ 4 (DAY 16–20) — Архитектура + Mock + Финал
+// =============================================================================
+
+//  DAY 16 — FSD + Clean Architecture + State
+//    theory/week4/featureSlicedDesign.js, cleanArchitecture.js, stateManagement.jsx, RTK.jsx
+
+//  DAY 17 — Design Systems + Monorepo + SOLID + Patterns
+//    theory/week4/designSystems.js, monorepo.js, solid.js, designPatterns.js
+
+//  DAY 18 — Mock Interview ×8 (system, react, ts, js)
+
+//  DAY 19 — Mock ×8 + слабые темы + practice/tasks-js/ ×3
+
+//  DAY 20 — ФИНАЛ: все handCoding из памяти + mock ×8
+
+// =============================================================================
+//  СТРУКТУРА РЕПО
+// =============================================================================
+
+//  schedule/DAY_01 … DAY_20   — маршрут на каждый день
+//  theory/week1 … week4        — теория
+//  practice/handCoding/        — код без AI
+//  practice/tasks-js/          — задачи JavaScript
+//  practice/tasks-react/       — задачи React
+//  mockInterview/questions.js  — node mockInterview/questions.js N
+
+// =============================================================================
+//  HAND CODING (без AI)
+// =============================================================================
+
+//  debounce.js          → DAY 02
+//  throttle.js          → DAY 02
+//  eventEmitter.js      → DAY 05
+//  useDebounce.jsx      → DAY 08
+//  miniStateManager.js  → DAY 09
+//  miniReactQuery.js    → DAY 12
+//  solutions/           → сверка после своего решения
