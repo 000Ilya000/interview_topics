@@ -1,20 +1,26 @@
-# День 18 — Mock Interview
+# День 18 — Доступные интерактивные компоненты ★ Senior
 
-> Неделя 4, день 3 | ~3 ч
+> Неделя 4, день 3 | ~2.5 ч
 
-## Формат как на собесе — ответы **вслух**, 3 мин на вопрос
+## READ (50 мин)
 
-| # | Категория | Вопрос |
-|---|-----------|--------|
-| 1 | system | Спроектируй админку на 100 экранов |
-| 2 | react | Почему лишний рендер и как найти? |
-| 3 | typescript | any vs unknown vs never |
-| 4 | javascript | Event loop — Promise vs setTimeout |
-| 5 | system | TanStack Query vs Redux |
-| 6 | react | Когда SSR вредит perf |
-| 7 | typescript | Conditional types + infer |
-| 8 | javascript | Debounce vs throttle — реализуй |
+| # | Файл |
+|---|------|
+| 1 | **`theory/week2/accessibleComponents.md`** ← главный файл дня |
+| 2 | `theory/week1/htmlCssA11y.js` | база семантики |
 
-Запиши 3 слабые темы → повтори в DAY_19
+## EXPLAIN (Middle vs Senior)
+
+| Middle | Senior |
+|--------|--------|
+| role="dialog", Escape | focus trap — зачем и как |
+| aria-label | возврат фокуса на триггер |
+| Radix из коробки | aria-hidden vs inert |
+| | prefers-reduced-motion |
+| | тест Tab + VoiceOver/NVDA |
+
+## Практика (20 мин)
+
+Открой любую модалку на сайте → пройди Tab с клавиатуры. Фокус уходит на фон? Это баг.
 
 **→ [DAY_19.md](DAY_19.md)**

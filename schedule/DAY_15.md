@@ -1,14 +1,21 @@
-# День 15 — Задачи + закрепление W3
+# День 15 — Повторение недели 3
 
 > Неделя 3, день 5 | ~3 ч
 
-## CODE (2 ч) — без AI
+## EXPLAIN (30 мин) — без файлов
 
-1. miniReactQuery — перепиши из памяти
-2. `practice/tasks-js/` ×3 на выбор (anagrama, removeDublicateFromArray, sumOfTwo)
+1. SSR vs SSG — когда что
+2. XSS vs CSRF — разница и защита
+3. Race condition — как воспроизвести и fix
+4. AbortController + cleanup
+5. Stale-while-revalidate — одним предложением
+
+## CODE
+
+miniReactQuery — перепиши из памяти (30 мин)
 
 ## MOCK (30 мин)
 
-4 вопроса: 2× javascript, 1× react, 1× system
+`node mockInterview/questions.js 11` … `15`
 
-**→ [DAY_16.md](DAY_16.md)** — Архитектура
+**→ [DAY_16.md](DAY_16.md)** — Reflow Senior

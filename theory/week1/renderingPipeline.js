@@ -1,5 +1,6 @@
-//! RENDERING PIPELINE — Critical Rendering Path
-//! Связь с performance: reflow дороже repaint
+//! RENDERING PIPELINE — база (Middle)
+//! Senior-версия с layout thrashing, CLS, DevTools → reflowRepaint.md (DAY 16)
+//! 📖 https://web.dev/articles/rendering-performance
 
 //! ─── Этапы ───────────────────────────────────────────────────────────────────
 // 1. Parse HTML → DOM

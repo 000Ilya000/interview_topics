@@ -1,22 +1,30 @@
-# День 14 — Повторение недели 3
+# День 14 — Надёжная загрузка данных ★ Senior
 
-> Неделя 3, день 4 | ~2.5 ч
+> Неделя 3, день 4 | ~3 ч
 
-## EXPLAIN (30 мин) — без файлов
+## READ (60 мин)
 
-1. SSR vs SSG — когда что
-2. Hydration mismatch — причины
-3. CORS preflight
-4. JWT в httpOnly cookie vs localStorage
-5. Core Web Vitals
+| # | Файл |
+|---|------|
+| 1 | **`theory/week3/reliableDataFetching.md`** ← главный файл дня |
 
-## MOCK (45 мин)
+## EXPLAIN (Middle vs Senior)
 
-`node mockInterview/questions.js 11` … `14`
+| Middle | Senior (ты) |
+|--------|-------------|
+| try/catch + loading/error | + race condition |
+| async/await | + AbortController cleanup |
+| react-query «из коробки» | + dedup через Map, backoff, stale-while-revalidate |
+| AbortController «слышал» | + воспроизвести race condition |
 
-## CHECK
+## CODE (90 мин) ✍️
 
-- [ ] Могу за 2 мин объяснить «когда SSR вредит perf»
-- [ ] miniReactQuery — помню структуру cache
+`practice/handCoding/miniReactQuery.js` → solutions
+
+Потом объясни вслух: **зачем TanStack Query**, если можно fetch в useEffect?
+
+## MOCK
+
+`node mockInterview/questions.js 14`
 
 **→ [DAY_15.md](DAY_15.md)**

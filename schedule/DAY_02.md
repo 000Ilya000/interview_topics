@@ -1,8 +1,12 @@
 # День 2 — Promises + Closures + Debounce
 
-> Неделя 1 | ~3 часа
+> Неделя 1, день 2 | ~3 ч
 
-## READ (50 мин)
+## Шаг 0 — SIMPLE (15 мин)
+
+`theory/week1/SIMPLE_GUIDE.md` — Promises, Closures, Debounce
+
+## READ (40 мин)
 
 | # | Файл |
 |---|------|

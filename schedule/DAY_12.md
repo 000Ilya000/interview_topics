@@ -1,6 +1,6 @@
-# День 12 — HTTP + CORS + miniReactQuery
+# День 12 — HTTP + CORS + fetch + JWT
 
-> Неделя 3, день 2 | ~3 ч
+> Неделя 3, день 2 | ~2.5 ч
 
 ## READ (50 мин)
 
@@ -12,12 +12,13 @@
 | 4 | `theory/week3/fetchAPI.js` |
 | 5 | `theory/week3/corsCookiesJwt.js` |
 
-## CODE (90 мин) ✍️
+## EXPLAIN
 
-`practice/handCoding/miniReactQuery.js` → solutions
+- CORS preflight — когда срабатывает
+- JWT в httpOnly cookie vs localStorage — **почему**
 
 ## MOCK
 
 `node mockInterview/questions.js 12`
 
-**→ [DAY_13.md](DAY_13.md)**
+**→ [DAY_13.md](DAY_13.md)** — XSS/CSRF

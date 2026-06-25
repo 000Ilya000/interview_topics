@@ -1,22 +1,18 @@
-# Senior Frontend — 20 рабочих дней
+# Senior Frontend — 25 рабочих дней
 
-**→ [START_HERE.md](START_HERE.md)** | **→ [schedule/DAY_01.md](schedule/DAY_01.md)** | **→ [exploreTopics.js](exploreTopics.js)**
+**Старт в понедельник?** → [BEFORE_START.md](BEFORE_START.md)  
+**Каждый день** → [schedule/DAY_01.md](schedule/DAY_01.md)  
+**Карта тем** → [exploreTopics.js](exploreTopics.js)
 
-4 недели × 5 дней (пн–пт). ~3 ч/день.
+## Принцип курса
 
-```
-schedule/DAY_01 … DAY_20
-theory/week1 … week4
-practice/handCoding/ + tasks-js/ + tasks-react/
-mockInterview/
-exploreTopics.js    ← карта тем
-```
+> Простым языком → жизненные примеры → код → вслух → hand coding без AI
 
-| Нед | Дни | Фокус |
-|-----|-----|-------|
-| 1 | 01–05 | HTML, JS, Browser |
-| 2 | 06–10 | TypeScript, React |
-| 3 | 11–15 | Next.js, Network, Security |
-| 4 | 16–20 | Architecture, Mock, Финал |
+| Шаг | Что |
+|-----|-----|
+| 1 | `theory/weekN/SIMPLE_GUIDE.md` |
+| 2 | `.md` / `.js` из schedule |
+| 3 | Объясни вслух |
+| 4 | `practice/` |
 
-Таблица: [schedule/README.md](schedule/README.md)
+5 нед × пн–пт · ~3 ч/день · [schedule/README.md](schedule/README.md)

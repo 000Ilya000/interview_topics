@@ -1,22 +1,23 @@
-# День 17 — Design Systems + Monorepo + SOLID
+# День 17 — Code Splitting ★ Senior
 
 > Неделя 4, день 2 | ~2.5 ч
 
-## READ (45 мин)
+## READ (50 мин)
 
 | # | Файл |
 |---|------|
-| 1 | `theory/week4/designSystems.js` |
-| 2 | `theory/week4/monorepo.js` |
-| 3 | `theory/week4/solid.js` |
-| 4 | `theory/week4/designPatterns.js` |
+| 1 | **`theory/week3/codeSplitting.md`** ← главный файл дня |
+| 2 | `theory/week2/advancedPatterns.jsx` | React.lazy + Suspense |
 
-## CODE (60 мин)
+## EXPLAIN
 
-`practice/tasks-js/` ×2
+- Три стратегии: роуты, фичи, вендоры
+- preload vs prefetch
+- sideEffects + tree shaking
+- HTTP/2 и чанки — почему не один bundle
 
 ## MOCK
 
-`node mockInterview/questions.js 17`
+«Как бы ты уменьшил initial bundle на 40%?» — ответ вслух 3 мин
 
-**→ [DAY_18.md](DAY_18.md)**
+**→ [DAY_18.md](DAY_18.md)** — A11y

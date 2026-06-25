@@ -1,39 +1,29 @@
-# День 20 — ФИНАЛ 🎯
+# День 20 — Повторение Senior-блоков (недели 3–4)
 
-> Неделя 4, день 5 | ~3–4 ч
+> Неделя 4, день 5 | ~3 ч
 
-## 1. EXPLAIN marathon (45 мин)
+## EXPLAIN marathon (45 мин) — без файлов
 
-10 тем без файлов — отметь ❌ где запнулся:
+Отметь ❌ где слабо:
 
-- [ ] Event loop
-- [ ] Closures + debounce/throttle
-- [ ] React reconciliation + keys
-- [ ] Extra renders
-- [ ] SSR vs SSG vs ISR
-- [ ] Server Components
-- [ ] CORS + JWT
-- [ ] XSS + CSRF
-- [ ] FSD layers
-- [ ] TanStack Query vs Redux
+- [ ] XSS — 3 вида + защита
+- [ ] CSRF — механизм + SameSite
+- [ ] Race condition + AbortController
+- [ ] Dedup + stale-while-revalidate
+- [ ] Layout → paint → composite
+- [ ] Layout thrashing
+- [ ] Code splitting — 3 стратегии
+- [ ] Focus trap + возврат фокуса
+- [ ] aria-hidden vs inert
 
-## 2. Hand coding marathon (90 мин) ✍️
+## MOCK (45 мин)
 
-Перепиши **все 6** без solutions:
+8 вопросов по Senior-темам — ответы вслух
 
-- debounce, throttle, EventEmitter
-- useDebounce, miniStateManager, miniReactQuery
+## CHECK
 
-## 3. Mock final (45 мин)
+- [ ] Могу объяснить XSS/CSRF за 2 мин
+- [ ] Могу нарисовать race condition словами
+- [ ] Знаю чем transform лучше left для анимаций
 
-8 вопросов — system ×2, react ×2, ts ×2, js ×2
-
-## 4. Готов
-
-- [ ] 20 дней пройдены
-- [ ] handCoding из памяти
-- [ ] Позиция: **Senior Frontend Engineer (React/Next.js)**
-
-🎉 Откликайся — собесы параллельно с повторением слабых тем.
-
-Карта курса: `exploreTopics.js`
+**→ [DAY_21.md](DAY_21.md)** — Архитектура

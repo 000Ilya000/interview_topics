@@ -1,9 +1,10 @@
 # Week 2 — TypeScript + React
 
-## TypeScript
-`anyTypes.ts`, `typeGuards.ts`, `generics.tsx`, `utilityTypes.ts`, `declorations.d.ts`, `inferTypes.ts`, `conditionalTypes.ts`, `mappedTypes.ts`, `declarationMerging.d.ts`
+## TypeScript — DAY 06
+`anyTypes.ts`, `typeGuards.ts`, `generics.tsx`, `utilityTypes.ts`, `inferTypes.ts`, `conditionalTypes.ts`, `mappedTypes.ts`
 
-## React
-`reconciliation.jsx`, `fiber.jsx`, `renderCycle.jsx`, `hooksOverview.jsx`, `context.jsx`, `extraRenders.jsx`, `concurrentFeatures.jsx`, `advancedPatterns.jsx`, `useEffectUseLayoutEffect.jsx`, `useMemoUseCallback.jsx`, `useLocalStorage.tsx`, `classFuncComponents.jsx`, `smthTasks.jsx`
+## React — DAY 07–09
+`reconciliation.jsx`, `fiber.jsx`, `hooksOverview.jsx`, `extraRenders.jsx`, …
 
-Расписание: `schedule/DAY_08.md` … `DAY_14.md`
+## A11y Senior — DAY 18
+**`accessibleComponents.md`** — focus trap, inert, screen readers

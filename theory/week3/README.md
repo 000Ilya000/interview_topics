@@ -1,19 +1,12 @@
-# Week 3 — Next.js + Сеть + Security + Performance
+# Week 3 — Next.js + Сеть + Security + Data (Senior)
 
-| Файл | Тема |
-|------|------|
-| `renderingModes.jsx` | SSR, SSG, ISR, CSR |
-| `hydration.jsx` | Hydration mismatch |
-| `appRouter.jsx` | App Router |
-| `serverComponents.jsx` | RSC vs Client |
-| `streaming.jsx` | Streaming |
-| `routeHandlers.jsx` | Route Handlers, Server Actions |
-| `httpTls.js` | HTTP, HTTPS, TLS, HTTP/2 |
-| `fetchAPI.js` | fetch |
-| `corsCookiesJwt.js` | CORS, cookies, JWT |
-| `security.js` | XSS, CSRF, CSP |
-| `webVitals.js` | LCP, INP, CLS |
-| `protokols.js` | HTTP, WS, GraphQL, SSE |
-| `websocketReact.jsx` | WebSocket в React |
+| Файл | Тема | День |
+|------|------|------|
+| `renderingModes.jsx` … `serverComponents.jsx` | Next.js | 11 |
+| `httpTls.js`, `fetchAPI.js`, `corsCookiesJwt.js` | HTTP, CORS | 12 |
+| **`xssCsrf.md`** | XSS + CSRF ★ | 13 |
+| **`reliableDataFetching.md`** | Data fetching ★ | 14 |
+| **`codeSplitting.md`** | Code Splitting ★ | 17 |
+| `webVitals.js`, `protokols.js`, `websocketReact.jsx` | Perf, протоколы | 19 |
 
-Расписание: `schedule/DAY_15.md` … `DAY_21.md`
+★ — Senior-темы простым языком + ссылки на OWASP, MDN, web.dev

@@ -1,24 +1,22 @@
-# День 13 — Security + Web Vitals + Протоколы
+# День 13 — XSS + CSRF ★ Senior
 
 > Неделя 3, день 3 | ~2.5 ч
 
-## READ (50 мин)
+## READ (60 мин)
 
 | # | Файл |
 |---|------|
-| 1 | `theory/week3/security.js` |
-| 2 | `theory/week3/webVitals.js` |
-| 3 | `theory/week3/protokols.js` |
-| 4 | `theory/week3/websocketReact.jsx` |
+| 1 | **`theory/week3/xssCsrf.md`** ← главный файл дня |
+| 2 | `theory/week3/security.js` | CSP кратко |
 
-## EXPLAIN
+## EXPLAIN вслух (must know)
 
-- XSS / CSRF / CSP — что и как защититься
-- LCP, INP, CLS — пороги
-- HTTP vs WebSocket vs GraphQL
+1. XSS — три вида, что крадут, 3 способа защиты
+2. CSRF — как работает атака, SameSite + CSRF token
+3. Почему JWT **не** в localStorage
 
 ## MOCK
 
-`node mockInterview/questions.js 13`
+Ответь: «Объясни XSS и CSRF и как защититься» — 3 минуты без подсказок
 
-**→ [DAY_14.md](DAY_14.md)**
+**→ [DAY_14.md](DAY_14.md)** — Data fetching

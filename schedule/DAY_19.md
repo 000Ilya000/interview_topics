@@ -1,14 +1,22 @@
-# День 19 — Mock + слабые места
+# День 19 — Web Vitals + Протоколы + WebSocket
 
-> Неделя 4, день 4 | ~3 ч
+> Неделя 4, день 4 | ~2.5 ч
 
-## Утро — повтори файлы по слабым темам с DAY_18
+## READ (45 мин)
 
-## День — mock ×8 (новые из `mockInterview/questions.js` 1–8)
+| # | Файл |
+|---|------|
+| 1 | `theory/week3/webVitals.js` |
+| 2 | `theory/week3/protokols.js` |
+| 3 | `theory/week3/websocketReact.jsx` |
 
-## Вечер
+## EXPLAIN
 
-- `practice/tasks-js/` ×3
-- Все handCoding — прогон глазами, что помнишь без подсказок
+- LCP, INP, CLS — пороги простыми словами
+- HTTP vs WebSocket vs GraphQL — когда что
+
+## MOCK
+
+`node mockInterview/questions.js 19`
 
 **→ [DAY_20.md](DAY_20.md)**

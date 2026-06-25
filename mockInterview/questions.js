@@ -1,6 +1,5 @@
 // 🎯 MOCK INTERVIEW
-// Запуск: node mockInterview/questions.js 1
-//         node mockInterview/questions.js     (день 1 по умолчанию)
+// 25 рабочих дней — node mockInterview/questions.js N  (N = 1…25)
 
 export const mockQuestions = {
   system: [
@@ -46,6 +45,19 @@ export const mockQuestions = {
     "Что такое prototype chain?",
     "Как найти memory leak в Chrome DevTools?",
   ],
+
+  senior: [
+    "XSS — три вида, как защититься?",
+    "CSRF — как работает, SameSite vs CSRF token?",
+    "Race condition при fetch — воспроизведи и fix",
+    "AbortController + cleanup в useEffect — зачем?",
+    "Stale-while-revalidate — что это?",
+    "Reflow vs Repaint vs Composite — цепочка",
+    "Layout thrashing — что это и как fix?",
+    "Code splitting — три стратегии, preload vs prefetch",
+    "Focus trap в модалке — зачем?",
+    "aria-hidden vs inert — разница?",
+  ],
 };
 
 export function getDailyQuestions(day) {
@@ -56,6 +68,7 @@ export function getDailyQuestions(day) {
     react: mockQuestions.react[d],
     typescript: mockQuestions.typescript[d],
     javascript: mockQuestions.javascript[d],
+    senior: mockQuestions.senior[d % mockQuestions.senior.length],
   };
 }
 
@@ -66,4 +79,5 @@ console.log("SYSTEM:    ", getDailyQuestions(day).system);
 console.log("REACT:     ", getDailyQuestions(day).react);
 console.log("TYPESCRIPT:", getDailyQuestions(day).typescript);
 console.log("JAVASCRIPT:", getDailyQuestions(day).javascript);
+console.log("SENIOR:    ", getDailyQuestions(day).senior);
 console.log("\n→ Ответь на каждый ВСЛУХ, 2–3 мин на вопрос\n");

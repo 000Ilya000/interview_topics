@@ -1,24 +1,26 @@
-# День 16 — Architecture + State Management
+# День 16 — Reflow vs Repaint ★ Senior
 
-> Неделя 4, день 1 | ~3 ч
+> Неделя 4, день 1 | ~2.5 ч
 
 ## READ (60 мин)
 
 | # | Файл |
 |---|------|
-| 1 | `theory/week4/featureSlicedDesign.js` |
-| 2 | `theory/week4/cleanArchitecture.js` |
-| 3 | `theory/week4/stateManagement.jsx` |
-| 4 | `theory/week4/RTK.jsx` |
+| 1 | **`theory/week1/reflowRepaint.md`** ← главный файл дня |
+| 2 | `theory/week1/renderingPipeline.js` | повтор базы |
 
-## EXPLAIN
+## EXPLAIN (Middle vs Senior)
 
-- FSD слои и правило импортов
-- TanStack Query vs Redux vs Zustand
-- Как организовать проект на 50 разработчиков?
+| Middle | Senior |
+|--------|--------|
+| reflow дороже repaint | layout → paint → composite цепочка |
+| transform лучше left | layout thrashing + как fix |
+| will-change | memory overhead compositor layers |
+| | DevTools Performance + Paint flashing |
+| | связь reflow с CLS |
 
-## MOCK
+## Практика (15 мин)
 
-`node mockInterview/questions.js 16`
+Открой DevTools → Performance → запиши короткую анимацию через `left` vs `transform` — сравни Layout blocks
 
-**→ [DAY_17.md](DAY_17.md)**
+**→ [DAY_17.md](DAY_17.md)** — Code Splitting

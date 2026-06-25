@@ -2,7 +2,11 @@
 
 > Неделя 3, день 1 | ~3 ч
 
-## READ (60 мин)
+## Шаг 0 — SIMPLE (15 мин)
+
+**`theory/week3/SIMPLE_GUIDE.md`** — SSR, Server/Client Components
+
+## READ (50 мин)
 
 | # | Файл |
 |---|------|
@@ -11,11 +15,11 @@
 | 3 | `theory/week3/appRouter.jsx` |
 | 4 | `theory/week3/serverComponents.jsx` |
 
-## EXPLAIN (must know)
+## EXPLAIN
 
-- SSR vs SSG vs ISR vs CSR
+- SSR vs SSG vs ISR vs CSR — простыми словами
 - **Когда SSR ухудшает производительность?**
-- Server vs Client Components, `'use client'`
+- Server vs Client Components
 
 ## MOCK
 
