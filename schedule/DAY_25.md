@@ -33,6 +33,8 @@ node mockInterview/questions.js 25
 
 ## 4. Готов ✅
 
+> ✅ Кликабельные чекбоксы → [Issue «Прогресс»](../../issues/new?template=course_progress.md) · в Obsidian — отмечай ниже
+
 - [ ] 25 дней пройдены
 - [ ] Middle vs Senior — могу объяснить разницу по 5 блокам
 - [ ] Позиция: **Senior Frontend Engineer (React/Next.js)**

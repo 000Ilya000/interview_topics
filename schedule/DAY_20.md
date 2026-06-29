@@ -26,6 +26,8 @@ node mockInterview/questions.js 20
 
 ## CHECK
 
+> ✅ Кликабельные чекбоксы → [Issue «Прогресс»](../../issues/new?template=course_progress.md) · в Obsidian — отмечай ниже
+
 - [ ] Могу объяснить XSS/CSRF за 2 мин
 - [ ] Могу нарисовать race condition словами
 - [ ] Знаю чем transform лучше left для анимаций

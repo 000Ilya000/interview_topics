@@ -1,7 +1,8 @@
 # Неделя 3 — Next.js + Сеть + Security (DAY 11–15)
 
 > Одна неделя = Next.js глубоко + HTTP/CORS + XSS/CSRF + надёжная загрузка данных.  
-> Расписание: `schedule/DAY_11` … `DAY_15`
+> Расписание: `schedule/DAY_11` … `DAY_15`  
+> Чекбоксы ниже: самопроверка. На GitHub не кликаются → [Issue «Прогресс»](../../issues/new?template=course_progress.md) или Obsidian.
 
 ---
 

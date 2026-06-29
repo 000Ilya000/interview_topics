@@ -1,7 +1,8 @@
 # Неделя 2 — TypeScript + React (DAY 06–10)
 
 > Одна неделя = весь TS за день + React глубоко.  
-> Расписание: `schedule/DAY_06` … `DAY_10`
+> Расписание: `schedule/DAY_06` … `DAY_10`  
+> Чекбоксы ниже: самопроверка. На GitHub не кликаются → [Issue «Прогресс»](../../issues/new?template=course_progress.md) или Obsidian.
 
 ---
 

@@ -35,6 +35,8 @@ node mockInterview/questions.js 2
 
 ## CHECK
 
+> ✅ Кликабельные чекбоксы → [Issue «Прогресс»](../../issues/new?template=course_progress.md) · в Obsidian — отмечай ниже
+
 - [ ] debounce написан руками
 - [ ] throttle написан руками
 - [ ] сверил с solutions

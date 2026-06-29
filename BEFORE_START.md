@@ -6,6 +6,8 @@
 
 ## За выходные (30–60 мин, без напряга)
 
+> **Чекбоксы:** в файлах на GitHub не кликаются. Создай [Issue «Прогресс»](issues/new?template=course_progress.md) — там отмечай всё. Или используй Obsidian.
+
 ### 1. Прочитай (20 мин)
 - [ ] [START_HERE.md](START_HERE.md) — как устроен курс
 - [ ] [exploreTopics.js](exploreTopics.js) — пробегись глазами, **не учи**
