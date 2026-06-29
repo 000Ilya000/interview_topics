@@ -24,7 +24,7 @@
 
 > Senior = объяснить просто, не засыпать терминами.
 
-**Прогресс:** чекбоксы в Issue [кликабельны](issues/new?template=course_progress.md) · в Obsidian — прямо в `DAY_XX.md`
+**Прогресс:** [README — живой блок](README.md) · чекбоксы в [Issue](issues/new?template=course_progress.md) (кликабельны)
 
 ---
 
