@@ -11,7 +11,7 @@
 | | |
 |---|---|
 | **Статус** | Issue ещё не создан |
-| **Действие** | **[→ Создать трекер прогресса](issues/new?template=course_progress.md)** |
+| **Действие** | **[→ Создать трекер прогресса](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md)** |
 
 Отметь чекбоксы в Issue — этот блок обновится автоматически (~1 мин).
 

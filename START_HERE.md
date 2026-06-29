@@ -24,7 +24,7 @@
 
 > Senior = объяснить просто, не засыпать терминами.
 
-**Прогресс:** [README — живой блок](README.md) · чекбоксы в [Issue](issues/new?template=course_progress.md) (кликабельны)
+**Прогресс:** [README — живой блок](README.md) · чекбоксы в [Issue](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md) (кликабельны)
 
 ---
 

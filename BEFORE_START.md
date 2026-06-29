@@ -6,7 +6,8 @@
 
 ## За выходные (30–60 мин, без напряга)
 
-> **Чекбоксы:** в файлах на GitHub не кликаются. Создай [Issue «Прогресс»](issues/new?template=course_progress.md) — там отмечай всё. Или используй Obsidian.
+> **Чекбоксы:** в файлах на GitHub не кликаются. Создай [Issue «Прогресс»](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md) — там отмечай всё. Или используй Obsidian.  
+> _(Если форкнул репо — обнови URL в `.github/course-urls.json`)_
 
 ### 1. Прочитай (20 мин)
 - [ ] [START_HERE.md](START_HERE.md) — как устроен курс

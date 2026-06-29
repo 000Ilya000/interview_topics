@@ -28,7 +28,7 @@
 
 ## CHECK
 
-> ✅ Кликабельные чекбоксы → [Issue «Прогресс»](../../issues/new?template=course_progress.md) · в Obsidian — отмечай ниже
+> ✅ Кликабельные чекбоксы → [Issue «Прогресс»](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md) · в Obsidian — отмечай ниже
 
 - [ ] 8 файлов прочитал
 - [ ] Объяснил this и prototypes вслух

@@ -2,7 +2,7 @@
 
 > Неделя 4 = Senior perf + a11y. Неделя 5 = архитектура + финальный mock.  
 > Расписание: `schedule/DAY_16` … `DAY_25`  
-> Чекбоксы ниже: самопроверка. На GitHub не кликаются → [Issue «Прогресс»](../../issues/new?template=course_progress.md) или Obsidian.
+> Чекбоксы ниже: самопроверка. На GitHub не кликаются → [Issue «Прогресс»](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md) или Obsidian.
 
 ---
 

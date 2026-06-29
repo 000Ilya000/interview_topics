@@ -61,7 +61,7 @@ node mockInterview/questions.js 1
 
 ## CHECK
 
-> ✅ Кликабельные чекбоксы → [Issue «Прогресс»](../../issues/new?template=course_progress.md) · в Obsidian — отмечай ниже
+> ✅ Кликабельные чекбоксы → [Issue «Прогресс»](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md) · в Obsidian — отмечай ниже
 
 - [ ] SIMPLE_GUIDE прочитан
 - [ ] 4 темы объяснил простым языком

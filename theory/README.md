@@ -2,7 +2,7 @@
 
 **Порядок:** `SIMPLE_GUIDE.md` → `.md` Senior → `.js` / `.jsx` код
 
-> Чекбоксы `- [ ]` в SIMPLE_GUIDE — для самопроверки «объясни вслух». На GitHub не кликаются; в **Obsidian** — да. Прогресс по дням → [Issue «Прогресс»](../issues/new?template=course_progress.md).
+> Чекбоксы `- [ ]` в SIMPLE_GUIDE — для самопроверки «объясни вслух». На GitHub не кликаются; в **Obsidian** — да. Прогресс по дням → [Issue «Прогресс»](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md).
 
 | Папка | SIMPLE_GUIDE | Дни |
 |-------|--------------|-----|

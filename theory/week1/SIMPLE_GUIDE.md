@@ -2,7 +2,7 @@
 
 > Читай **до** `.js` файлов. Одна неделя = HTML/CSS + весь базовый JS + браузер.  
 > Расписание: `schedule/DAY_01` … `DAY_05`  
-> Чекбоксы ниже: самопроверка. На GitHub не кликаются → [Issue «Прогресс»](../../issues/new?template=course_progress.md) или Obsidian.
+> Чекбоксы ниже: самопроверка. На GitHub не кликаются → [Issue «Прогресс»](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md) или Obsidian.
 
 ---
 

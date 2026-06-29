@@ -2,7 +2,7 @@
 
 > Одна неделя = Next.js глубоко + HTTP/CORS + XSS/CSRF + надёжная загрузка данных.  
 > Расписание: `schedule/DAY_11` … `DAY_15`  
-> Чекбоксы ниже: самопроверка. На GitHub не кликаются → [Issue «Прогресс»](../../issues/new?template=course_progress.md) или Obsidian.
+> Чекбоксы ниже: самопроверка. На GitHub не кликаются → [Issue «Прогресс»](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md) или Obsidian.
 
 ---
 

@@ -20,7 +20,7 @@
 
 | Где | Кликабельно? |
 |-----|--------------|
-| **GitHub Issue** | ✅ Да — [создай Issue «Прогресс»](../issues/new?template=course_progress.md) один раз на весь курс |
+| **GitHub Issue** | ✅ Да — [создай Issue «Прогресс»](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md) один раз на весь курс |
 | **README (главная)** | 📊 [Живой блок прогресса](../README.md) — обновляется из Issue автоматически |
 | **Obsidian / Cursor** | ✅ Да — отмечай прямо в `DAY_XX.md` |
 | **GitHub (просмотр файла)** | ❌ Только картинка |
