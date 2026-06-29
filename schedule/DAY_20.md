@@ -18,7 +18,11 @@
 
 ## MOCK (45 мин)
 
-8 вопросов по Senior-темам — ответы вслух
+```bash
+node mockInterview/questions.js 20
+```
+
+5 вопросов по Senior-темам недель 3–4 — ответы вслух
 
 ## CHECK
 

@@ -29,7 +29,9 @@
 
 ## MOCK (15 мин)
 
-`getDailyQuestions(2)` — javascript + react (react можно кратко)
+```bash
+node mockInterview/questions.js 2
+```
 
 ## CHECK
 

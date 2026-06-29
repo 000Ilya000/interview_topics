@@ -548,7 +548,7 @@ packages/
 
 ## День — mock ×8
 
-`node mockInterview/questions.js 1` … `8`
+`node mockInterview/questions.js 24`
 
 ## Вечер
 

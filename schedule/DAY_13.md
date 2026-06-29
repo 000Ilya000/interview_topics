@@ -15,8 +15,12 @@
 2. CSRF — как работает атака, SameSite + CSRF token
 3. Почему JWT **не** в localStorage
 
-## MOCK
+## MOCK (20 мин)
 
-Ответь: «Объясни XSS и CSRF и как защититься» — 3 минуты без подсказок
+```bash
+node mockInterview/questions.js 13
+```
+
+Главный вопрос вслух: «Объясни XSS и CSRF и как защититься» — 3 минуты без подсказок
 
 **→ [DAY_14.md](DAY_14.md)** — Data fetching

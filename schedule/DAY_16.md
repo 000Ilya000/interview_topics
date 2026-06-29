@@ -23,4 +23,10 @@
 
 Открой DevTools → Performance → запиши короткую анимацию через `left` vs `transform` — сравни Layout blocks
 
+## MOCK (15 мин)
+
+```bash
+node mockInterview/questions.js 16
+```
+
 **→ [DAY_17.md](DAY_17.md)** — Code Splitting

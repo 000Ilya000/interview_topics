@@ -16,8 +16,12 @@
 - sideEffects + tree shaking
 - HTTP/2 и чанки — почему не один bundle
 
-## MOCK
+## MOCK (15 мин)
 
-«Как бы ты уменьшил initial bundle на 40%?» — ответ вслух 3 мин
+```bash
+node mockInterview/questions.js 17
+```
+
+Главный вопрос вслух: «Как бы ты уменьшил initial bundle на 40%?» — 3 мин
 
 **→ [DAY_18.md](DAY_18.md)** — A11y

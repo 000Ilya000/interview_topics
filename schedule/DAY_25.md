@@ -25,7 +25,11 @@ debounce, throttle, EventEmitter, useDebounce, miniStateManager, miniReactQuery
 
 ## 3. Mock final (45 мин)
 
-8 вопросов — включая 4 Senior-темы
+```bash
+node mockInterview/questions.js 25
+```
+
+10 вопросов — весь курс вперемешку, включая system/architecture
 
 ## 4. Готов ✅
 

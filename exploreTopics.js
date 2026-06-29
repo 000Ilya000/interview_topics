@@ -103,3 +103,8 @@
 //  3. *.js / *.jsx                  — код, node / читать примеры
 //  4. schedule/DAY_XX.md            — маршрут дня
 //  5. practice/handCoding/          — без AI
+
+// ─── MOCK INTERVIEW ──────────────────────────────────────────────────────────
+//  Дни 1–22: node mockInterview/questions.js N   — только пройденный материал
+//  Повторение: node mockInterview/questions.js 1-5 — по 1 вопросу с каждого дня
+//  Финал:      node mockInterview/questions.js 23|24|25 — весь курс вперемешку

@@ -15,4 +15,10 @@
 
 `practice/tasks-js/` ×2 без AI
 
+## MOCK (15 мин)
+
+```bash
+node mockInterview/questions.js 22
+```
+
 **→ [DAY_23.md](DAY_23.md)**

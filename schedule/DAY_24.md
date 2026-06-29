@@ -11,7 +11,11 @@
 - `theory/week3/codeSplitting.md`
 - `theory/week2/accessibleComponents.md`
 
-## День — mock ×8 (`node mockInterview/questions.js 1` … `8`)
+## День — mock MIX #2
+
+```bash
+node mockInterview/questions.js 24
+```
 
 ## Вечер
 

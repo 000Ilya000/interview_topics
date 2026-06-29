@@ -22,4 +22,10 @@
 
 `practice/tasks-js/myFilter.js`, `practice/tasks-js/isPalindrome.js`
 
+## MOCK (15 мин)
+
+```bash
+node mockInterview/questions.js 4
+```
+
 **→ [DAY_05.md](DAY_05.md)**

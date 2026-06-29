@@ -16,6 +16,9 @@ miniReactQuery — перепиши из памяти (30 мин)
 
 ## MOCK (30 мин)
 
-`node mockInterview/questions.js 11` … `15`
+```bash
+node mockInterview/questions.js 15       # повторение недели (5 вопросов)
+node mockInterview/questions.js 11-15    # опционально: по 1 с каждого дня
+```
 
 **→ [DAY_16.md](DAY_16.md)** — Reflow Senior

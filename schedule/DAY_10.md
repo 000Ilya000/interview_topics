@@ -17,6 +17,9 @@
 
 ## MOCK (45 мин)
 
-`node mockInterview/questions.js 6` … `10` — по 1 вопросу каждый
+```bash
+node mockInterview/questions.js 10       # повторение недели (5 вопросов)
+node mockInterview/questions.js 6-10     # опционально: по 1 с каждого дня
+```
 
 **→ [DAY_11.md](DAY_11.md)** — Next.js
