@@ -22,6 +22,8 @@
 2. Кликай чекбоксы в Issue (в `.md` файлах на GitHub они не кликаются)
 3. Action обновит таблицу выше и закоммитит README
 
+Не обновилось? **Actions → Sync progress to README → Run workflow**
+
 </details>
 
 <!-- PROGRESS:END -->

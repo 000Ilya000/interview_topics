@@ -4,20 +4,26 @@ on:
   issues:
     types: [opened, edited, deleted, closed, reopened, labeled, unlabeled]
   workflow_dispatch:
+  schedule:
+    # запасной синк каждый час (если webhook не сработал)
+    - cron: "0 * * * *"
 
 permissions:
   contents: write
-  issues: read
+  issues: write
+
+concurrency:
+  group: sync-progress
+  cancel-in-progress: true
 
 jobs:
   sync:
     runs-on: ubuntu-latest
-    if: >
-      github.event_name == 'workflow_dispatch' ||
-      contains(github.event.issue.labels.*.name, 'progress')
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/setup-node@v4
         with:
@@ -28,14 +34,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node .github/scripts/sync-progress.mjs
 
-      - name: Commit README if changed
+      - name: Commit and push README if changed
         run: |
           if git diff --quiet README.md; then
-            echo "No changes"
+            echo "README unchanged"
             exit 0
           fi
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md
           git commit -m "chore: sync course progress from Issue"
           git push

@@ -19,16 +19,63 @@ if (!token || !repoFull) {
 
 const [owner, repo] = repoFull.split("/");
 
-async function github(path) {
+async function github(path, options = {}) {
   const res = await fetch(`https://api.github.com${path}`, {
+    method: options.method || "GET",
     headers: {
       Authorization: `Bearer ${token}`,
       Accept: "application/vnd.github+json",
       "X-GitHub-Api-Version": "2022-11-28",
+      ...(options.body ? { "Content-Type": "application/json" } : {}),
     },
+    body: options.body ? JSON.stringify(options.body) : undefined,
   });
   if (!res.ok) throw new Error(`GitHub API ${path}: ${res.status} ${await res.text()}`);
+  if (res.status === 204) return null;
   return res.json();
+}
+
+function isProgressIssue(issue) {
+  if (!issue || issue.pull_request) return false;
+
+  const labels = (issue.labels || []).map((l) => l.name);
+  if (labels.includes("progress")) return true;
+
+  const title = issue.title || "";
+  if (/прогресс|senior frontend prep/i.test(title)) return true;
+
+  const body = issue.body || "";
+  return body.includes("## До старта") && body.includes("### DAY 01");
+}
+
+async function fetchProgressIssues(state) {
+  const issues = await github(
+    `/repos/${owner}/${repo}/issues?state=${state}&sort=updated&direction=desc&per_page=50`
+  );
+  return issues.filter(isProgressIssue);
+}
+
+async function findProgressIssue() {
+  const open = await fetchProgressIssues("open");
+  if (open.length) return open[0];
+
+  const all = await fetchProgressIssues("all");
+  return all[0] || null;
+}
+
+async function ensureProgressLabel(issue) {
+  const hasLabel = (issue.labels || []).some((l) => l.name === "progress");
+  if (hasLabel) return;
+
+  try {
+    await github(`/repos/${owner}/${repo}/issues/${issue.number}/labels`, {
+      method: "POST",
+      body: { labels: ["progress"] },
+    });
+    console.log(`Added label "progress" to issue #${issue.number}`);
+  } catch (err) {
+    console.warn(`Could not add label to #${issue.number}:`, err.message);
+  }
 }
 
 function bar(ratio, width = 10) {
@@ -104,7 +151,9 @@ function parseProgress(body) {
       const b = buckets[w];
       const daysInWeek = Object.entries(dayStats).filter(([, d]) => d.section === w);
       const daysTotal = daysInWeek.length;
-      const daysDone = daysInWeek.filter(([, d]) => d.total > 0 && d.checked === d.total).length;
+      const daysDone = daysInWeek.filter(
+        ([, d]) => d.total > 0 && d.checked === d.total
+      ).length;
       return { name: w, ...b, daysDone, daysTotal };
     });
 
@@ -131,6 +180,8 @@ function buildBlock(issue) {
 2. Кликай чекбоксы в Issue (в \`.md\` файлах на GitHub они не кликаются)
 3. Action обновит таблицу ниже и закоммитит README
 
+Не обновилось? **Actions → Sync progress to README → Run workflow**
+
 </details>`;
   }
 
@@ -141,8 +192,7 @@ function buildBlock(issue) {
 
   const weekTable = weekRows
     .map((w) => {
-      const dayCol =
-        w.daysTotal > 0 ? `${w.daysDone}/${w.daysTotal} дней` : "—";
+      const dayCol = w.daysTotal > 0 ? `${w.daysDone}/${w.daysTotal} дней` : "—";
       const taskPct = pct(w.checked, w.total);
       return `| ${w.name} | ${dayCol} | ${w.checked}/${w.total} | ${bar(w.total ? w.checked / w.total : 0)} ${taskPct}% |`;
     })
@@ -184,22 +234,16 @@ function patchReadme(block) {
 }
 
 async function main() {
-  let issues = await github(
-    `/repos/${owner}/${repo}/issues?labels=progress&state=open&sort=updated&direction=desc&per_page=5`
-  );
+  const issue = await findProgressIssue();
 
-  let issue = issues.find((i) => !i.pull_request) || null;
-
-  if (!issue) {
-    const all = await github(
-      `/repos/${owner}/${repo}/issues?labels=progress&state=all&sort=updated&direction=desc&per_page=5`
-    );
-    issue = all.find((i) => !i.pull_request) || null;
+  if (issue) {
+    await ensureProgressLabel(issue);
+    console.log(`Syncing from issue #${issue.number}: "${issue.title}"`);
+  } else {
+    console.log("No progress issue found (by label, title, or template body)");
   }
 
-  console.log(issue ? `Syncing from issue #${issue.number}` : "No open progress issue");
-  const block = buildBlock(issue);
-  patchReadme(block);
+  patchReadme(buildBlock(issue));
 }
 
 main().catch((err) => {
