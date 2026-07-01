@@ -11,7 +11,7 @@
 4. practice/ — когда указано
 ```
 
-**25 рабочих дней** | Карта: `exploreTopics.js`
+**28 рабочих дней** (~2–2.5 ч/день) | Карта: [`exploreTopics.js`](exploreTopics.js) · [`schedule/COURSE_MAP.md`](schedule/COURSE_MAP.md)
 
 ---
 
@@ -31,7 +31,7 @@
 ## Структура
 
 ```
-schedule/DAY_01 … DAY_25
+schedule/DAY_01 … DAY_28
 theory/week1 … week4       ← .js/.jsx код + .md Senior-темы
 practice/handCoding/
 practice/tasks-js/ | tasks-react/
@@ -63,6 +63,7 @@ exploreTopics.js           ← карта всего курса
 | 2 | 06–10 | TypeScript, React |
 | 3 | 11–15 | Next.js, Security, **Data Senior** |
 | 4 | 16–20 | **Perf + A11y Senior** |
-| 5 | 21–25 | Architecture, Mock, Финал |
+| 5 | 21–25 | Next.js, HTTP, Security |
+| 6 | 26–28 | Data ★, Perf ★, **ФИНАЛ** |
 
 **→ [schedule/DAY_01.md](schedule/DAY_01.md)**

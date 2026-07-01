@@ -1,38 +1,60 @@
-# День 6 — TypeScript (весь блок)
+# День 6 — Memory + immutability
 
-> Неделя 2, день 1 | ~3–4 ч
+> Неделя 2 из 6 | ~**2 ч** | max 2–3 theory-файла
 
-## Шаг 0 — SIMPLE (20 мин)
+## Цель дня
 
-**`theory/week2/SIMPLE_GUIDE.md`** — раздел TypeScript
+Память и иммутабельность.
 
-## READ (80 мин)
+---
+
+## Шаг 0 — SIMPLE (10 мин) ★
+
+**`theory/week1/SIMPLE_GUIDE.md`** — memory
+
+---
+
+## Шаг 1 — READ (35 мин)
 
 | # | Файл |
 |---|------|
-| 1 | `theory/week2/anyTypes.ts` |
-| 2 | `theory/week2/typeGuards.ts` |
-| 3 | `theory/week2/generics.tsx` |
-| 4 | `theory/week2/utilityTypes.ts` |
-| 5 | `theory/week2/inferTypes.ts` |
-| 6 | `theory/week2/conditionalTypes.ts` |
-| 7 | `theory/week2/mappedTypes.ts` |
-| 8 | `theory/week2/declorations.d.ts` |
+| 1 | `theory/week1/memoryLeaks.js` |
+| 2 | `theory/week1/immutability.js` |
 
-## EXPLAIN (20 мин)
+```bash
+node theory/week1/memoryLeaks.js
+```
 
-- any vs unknown vs never
-- Type guards + generics
-- Pick / Omit / Partial / ReturnType
-- infer + conditional types (distributive!)
-- Mapped types `{ [K in keyof T] }`
+---
 
-## Практика (30 мин)
+## Шаг 2 — EXPLAIN (15 мин)
 
-Напиши тип `DeepPartial<T>` на бумаге или в `.ts` файле
+Закрой файлы. Объясни **как коллеге**:
 
-## MOCK
+1. 3 причины memory leak
+2. Immutability в React
+3. Shallow copy
 
-`node mockInterview/questions.js 6`
+---
 
-**→ [DAY_07.md](DAY_07.md)**
+## Шаг 3 — CODE (30 мин) ✍️
+
+Пример плохо/хорошо — в комментарии.
+
+---
+
+## Шаг 4 — MOCK (10 мин)
+
+```bash
+node mockInterview/questions.js 6
+```
+
+---
+
+## CHECK
+
+> ✅ Прогресс → [Issue](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md)
+
+- [ ] memory + immutability вслух
+
+**Завтра → [DAY_07.md](DAY_07.md)**

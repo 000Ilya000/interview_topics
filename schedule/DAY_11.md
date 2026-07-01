@@ -1,28 +1,55 @@
-# День 11 — Next.js: SSR + App Router + RSC
+# День 11 — TS: any + type guards
 
-> Неделя 3, день 1 | ~3 ч
+> Неделя 3 из 6 | ~**2 ч** | max 2–3 theory-файла
 
-## Шаг 0 — SIMPLE (15 мин)
+## Цель дня
 
-**`theory/week3/SIMPLE_GUIDE.md`** — SSR, Server/Client Components
+TypeScript 1/4.
 
-## READ (50 мин)
+---
+
+## Шаг 0 — SIMPLE (10 мин) ★
+
+**`theory/week2/SIMPLE_GUIDE.md`** — TS
+
+---
+
+## Шаг 1 — READ (35 мин)
 
 | # | Файл |
 |---|------|
-| 1 | `theory/week3/renderingModes.jsx` |
-| 2 | `theory/week3/hydration.jsx` |
-| 3 | `theory/week3/appRouter.jsx` |
-| 4 | `theory/week3/serverComponents.jsx` |
+| 1 | `theory/week2/anyTypes.ts` |
+| 2 | `theory/week2/typeGuards.ts` |
 
-## EXPLAIN
+---
 
-- SSR vs SSG vs ISR vs CSR — простыми словами
-- **Когда SSR ухудшает производительность?**
-- Server vs Client Components
+## Шаг 2 — EXPLAIN (15 мин)
 
-## MOCK
+Закрой файлы. Объясни **как коллеге**:
 
-`node mockInterview/questions.js 11`
+1. any vs unknown vs never
+2. Type guard `x is User`
 
-**→ [DAY_12.md](DAY_12.md)**
+---
+
+## Шаг 3 — CODE (30 мин) ✍️
+
+_Только типы, без tasks._
+
+---
+
+## Шаг 4 — MOCK (10 мин)
+
+```bash
+node mockInterview/questions.js 11
+```
+
+---
+
+## CHECK
+
+> ✅ Прогресс → [Issue](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md)
+
+- [ ] any + guards прочитал
+
+**Завтра → [DAY_12.md](DAY_12.md)**

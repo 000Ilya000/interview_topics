@@ -1,22 +1,54 @@
-# День 9 — Context + Concurrent + State
+# День 9 — EventEmitter + память W1
 
-> Неделя 2, день 4 | ~3 ч
+> Неделя 2 из 6 | ~**2.5 ч** | max 2–3 theory-файла
 
-## READ (45 мин)
+## Цель дня
 
-| # | Файл |
-|---|------|
-| 1 | `theory/week2/context.jsx` |
-| 2 | `theory/week2/concurrentFeatures.jsx` |
-| 3 | `theory/week2/advancedPatterns.jsx` |
+Hand coding недели 1.
 
-## CODE (90 мин) ✍️
+---
 
-1. `practice/handCoding/miniStateManager.js` → solutions
-2. `practice/tasks-react/testScreen_1.js`
+## Шаг 0 — SIMPLE (10 мин) ★
 
-## MOCK
+Повтор SIMPLE — weak points
 
-`node mockInterview/questions.js 9`
+---
 
-**→ [DAY_10.md](DAY_10.md)**
+## Шаг 1 — READ (35 мин)
+
+_Без новых файлов — повторение._
+
+---
+
+## Шаг 2 — EXPLAIN (15 мин)
+
+Закрой файлы. Объясни **как коллеге**:
+
+1. EventEmitter своими словами
+2. debounce/throttle из памяти
+
+---
+
+## Шаг 3 — CODE (45 мин) ✍️
+
+1. `eventEmitter.js` → solutions
+2. debounce + throttle **из памяти**
+
+---
+
+## Шаг 4 — MOCK (10 мин)
+
+```bash
+node mockInterview/questions.js 9
+```
+
+---
+
+## CHECK
+
+> ✅ Прогресс → [Issue](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md)
+
+- [ ] EventEmitter руками
+- [ ] debounce/throttle память
+
+**Завтра → [DAY_10.md](DAY_10.md)**

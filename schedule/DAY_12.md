@@ -1,24 +1,55 @@
-# День 12 — HTTP + CORS + fetch + JWT
+# День 12 — TS: utility + generics
 
-> Неделя 3, день 2 | ~2.5 ч
+> Неделя 3 из 6 | ~**2 ч** | max 2–3 theory-файла
 
-## READ (50 мин)
+## Цель дня
+
+TypeScript 2/4.
+
+---
+
+## Шаг 0 — SIMPLE (10 мин) ★
+
+**`theory/week2/SIMPLE_GUIDE.md`**
+
+---
+
+## Шаг 1 — READ (35 мин)
 
 | # | Файл |
 |---|------|
-| 1 | `theory/week3/streaming.jsx` |
-| 2 | `theory/week3/routeHandlers.jsx` |
-| 3 | `theory/week3/httpTls.js` |
-| 4 | `theory/week3/fetchAPI.js` |
-| 5 | `theory/week3/corsCookiesJwt.js` |
+| 1 | `theory/week2/utilityTypes.ts` |
+| 2 | `theory/week2/generics.tsx` |
 
-## EXPLAIN
+---
 
-- CORS preflight — когда срабатывает
-- JWT в httpOnly cookie vs localStorage — **почему**
+## Шаг 2 — EXPLAIN (15 мин)
 
-## MOCK
+Закрой файлы. Объясни **как коллеге**:
 
-`node mockInterview/questions.js 12`
+1. Pick/Omit/Partial
+2. Generic ApiResponse<T>
 
-**→ [DAY_13.md](DAY_13.md)** — XSS/CSRF
+---
+
+## Шаг 3 — CODE (30 мин) ✍️
+
+DeepPartial<T> на бумаге.
+
+---
+
+## Шаг 4 — MOCK (10 мин)
+
+```bash
+node mockInterview/questions.js 12
+```
+
+---
+
+## CHECK
+
+> ✅ Прогресс → [Issue](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md)
+
+- [ ] utility + generics
+
+**Завтра → [DAY_13.md](DAY_13.md)**

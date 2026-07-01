@@ -1,23 +1,60 @@
-# День 7 — Reconciliation + Fiber + Render Cycle
+# День 7 — Map/Set + Rendering pipeline
 
-> Неделя 2, день 2 | ~2.5 ч
+> Неделя 2 из 6 | ~**2 ч** | max 2–3 theory-файла
 
-## READ (60 мин)
+## Цель дня
+
+Коллекции + как браузер рисует.
+
+---
+
+## Шаг 0 — SIMPLE (10 мин) ★
+
+**`theory/week1/SIMPLE_GUIDE.md`** — Map/Set, rendering
+
+---
+
+## Шаг 1 — READ (35 мин)
 
 | # | Файл |
 |---|------|
-| 1 | `theory/week2/reconciliation.jsx` |
-| 2 | `theory/week2/fiber.jsx` |
-| 3 | `theory/week2/renderCycle.jsx` |
+| 1 | `theory/week1/arrayMapSetWeakMapWeakSet.js` |
+| 2 | `theory/week1/renderingPipeline.js` |
 
-## EXPLAIN
+```bash
+node theory/week1/renderingPipeline.js
+```
 
-- Virtual DOM diff, зачем keys
-- Render phase vs commit phase
-- Порядок useLayoutEffect / useEffect
+---
 
-## MOCK
+## Шаг 2 — EXPLAIN (15 мин)
 
-`node mockInterview/questions.js 7`
+Закрой файлы. Объясни **как коллеге**:
 
-**→ [DAY_08.md](DAY_08.md)**
+1. Map vs Object
+2. Set vs Array
+3. Layout → Paint → Composite
+
+---
+
+## Шаг 3 — CODE (30 мин) ✍️
+
+_Сегодня без tasks — только теория._
+
+---
+
+## Шаг 4 — MOCK (10 мин)
+
+```bash
+node mockInterview/questions.js 7
+```
+
+---
+
+## CHECK
+
+> ✅ Прогресс → [Issue](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md)
+
+- [ ] Map/Set + pipeline вслух
+
+**Завтра → [DAY_08.md](DAY_08.md)**

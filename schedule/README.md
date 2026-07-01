@@ -1,28 +1,24 @@
-# 5 недель × 5 рабочих дней = 25 дней
+# 6 недель × ~5 дней = **28 рабочих дней** (~2–2.5 ч/день)
 
-> [START_HERE.md](../START_HERE.md) → `DAY_XX.md` | Карта: [exploreTopics.js](../exploreTopics.js)
+> [START_HERE.md](../START_HERE.md) · [COURSE_MAP.md](COURSE_MAP.md) · [exploreTopics.js](../exploreTopics.js)
 
-| Нед | Пн | Вт | Ср | Чт | Пт |
-|-----|----|----|----|----|-----|
-| **1** | [01](DAY_01.md) HTML+Event Loop | [02](DAY_02.md) Promises+debounce | [03](DAY_03.md) this+JS | [04](DAY_04.md) Memory+Reflow база | [05](DAY_05.md) Review W1 |
-| **2** | [06](DAY_06.md) TypeScript | [07](DAY_07.md) Fiber+Reconciliation | [08](DAY_08.md) Hooks+memo | [09](DAY_09.md) Context+Concurrent | [10](DAY_10.md) Review W2 |
-| **3** | [11](DAY_11.md) Next.js SSR+RSC | [12](DAY_12.md) HTTP+CORS | [13](DAY_13.md) **XSS+CSRF** | [14](DAY_14.md) **Data fetching Senior** | [15](DAY_15.md) Review W3 |
-| **4** | [16](DAY_16.md) **Reflow Senior** | [17](DAY_17.md) **Code Splitting** | [18](DAY_18.md) **A11y модалки** | [19](DAY_19.md) Web Vitals+WS | [20](DAY_20.md) Review W4 |
-| **5** | [21](DAY_21.md) Architecture+State | [22](DAY_22.md) SOLID+Monorepo | [23](DAY_23.md) Mock ×8 | [24](DAY_24.md) Mock+tasks | [25](DAY_25.md) **ФИНАЛ** |
+| Нед | Дни | Фокус |
+|-----|-----|-------|
+| **1** | [01](DAY_01.md)–[05](DAY_05.md) | HTML, JS basics, arrays · 01–02 ✅ |
+| **2** | [06](DAY_06.md)–[10](DAY_10.md) | Memory, browser, **Review W1** |
+| **3** | [11](DAY_11.md)–[15](DAY_15.md) | **TypeScript** (4 дня) + React start |
+| **4** | [16](DAY_16.md)–[20](DAY_20.md) | React hooks + patterns |
+| **5** | [21](DAY_21.md)–[25](DAY_25.md) | Review W2, **Next.js**, HTTP, **XSS** |
+| **6** | [26](DAY_26.md)–[28](DAY_28.md) | Data ★, Perf ★, **ФИНАЛ** |
 
-**Senior-блоки (недели 3–4):** XSS/CSRF, надёжная загрузка данных, Reflow/Repaint, Code Splitting, доступные компоненты.
+**Правило нагрузки:** max **2–3 theory-файла** в день. TS — **4 дня**, не один.
+
+**Senior:** XSS/CSRF, data fetching, reflow, code split, a11y — см. [COURSE_MAP.md](COURSE_MAP.md)
 
 ---
 
-## ✅ Чекбоксы — как отмечать прогресс
+## ✅ Прогресс
 
-На GitHub в `.md` файлах чекбоксы **не кликаются** — это ограничение GitHub, не баг курса.
+[Issue «Прогресс»](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md) · [README блок](../README.md)
 
-| Где | Кликабельно? |
-|-----|--------------|
-| **GitHub Issue** | ✅ Да — [создай Issue «Прогресс»](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md) один раз на весь курс |
-| **README (главная)** | 📊 [Живой блок прогресса](../README.md) — обновляется из Issue автоматически |
-| **Obsidian / Cursor** | ✅ Да — отмечай прямо в `DAY_XX.md` |
-| **GitHub (просмотр файла)** | ❌ Только картинка |
-
-**→ [DAY_01.md](DAY_01.md)**
+**→ Ты здесь: [DAY_03.md](DAY_03.md)** (или [DAY_04.md](DAY_04.md) если DAY 03 закрыт)

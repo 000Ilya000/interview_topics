@@ -1,16 +1,16 @@
-# День 25 — XSS + CSRF ★
+# День 27 — Reflow ★ + Code splitting ★
 
 > Неделя 6 из 6 | ~**2.5 ч** | max 2–3 theory-файла
 
 ## Цель дня
 
-Security senior.
+Senior perf.
 
 ---
 
 ## Шаг 0 — SIMPLE (10 мин) ★
 
-**`theory/week3/SIMPLE_GUIDE.md`**
+**`theory/week4/SIMPLE_GUIDE.md`**
 
 ---
 
@@ -18,12 +18,8 @@ Security senior.
 
 | # | Файл |
 |---|------|
-| 1 | `theory/week3/xssCsrf.md` |
-| 2 | `theory/week3/security.js` |
-
-```bash
-node theory/week3/security.js
-```
+| 1 | `theory/week1/reflowRepaint.md` |
+| 2 | `theory/week3/codeSplitting.md` |
 
 ---
 
@@ -31,22 +27,22 @@ node theory/week3/security.js
 
 Закрой файлы. Объясни **как коллеге**:
 
-1. XSS 3 вида
-2. CSRF + SameSite
-3. XSS vs CSRF
+1. Layout thrashing
+2. 3 стратегии split
+3. preload vs prefetch
 
 ---
 
 ## Шаг 3 — CODE (45 мин) ✍️
 
-3 мин XSS+CSRF **без подсказок**
+DevTools left vs transform
 
 ---
 
 ## Шаг 4 — MOCK (10 мин)
 
 ```bash
-node mockInterview/questions.js 25
+node mockInterview/questions.js 27
 ```
 
 ---
@@ -55,7 +51,7 @@ node mockInterview/questions.js 25
 
 > ✅ Прогресс → [Issue](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md)
 
-- [ ] xssCsrf.md
-- [ ] 3 мин вслух
+- [ ] 2 senior md
+- [ ] DevTools
 
-**Завтра → [DAY_26.md](DAY_26.md)**
+**Завтра → [DAY_28.md](DAY_28.md)** — ФИНАЛ

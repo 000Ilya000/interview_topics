@@ -1,25 +1,56 @@
-# День 10 — Повторение недели 2
+# День 10 — Review — неделя 1
 
-> Неделя 2, день 5 | ~3 ч
+> Неделя 2 из 6 | ~**2 ч** | max 2–3 theory-файла
 
-## EXPLAIN (30 мин)
+## Цель дня
 
-1. Conditional types + infer
-2. Fiber + reconciliation
-3. Лишние рендеры — причины и fix
-4. useTransition / Suspense
+Marathon + mock W1.
 
-## CODE
+---
 
-- `practice/tasks-react/testScreen_2.js`
-- `theory/week2/smthTasks.jsx` — 2 задачи
-- useDebounce + miniStateManager из памяти
+## Шаг 0 — SIMPLE (10 мин) ★
 
-## MOCK (45 мин)
+—
+
+---
+
+## Шаг 1 — READ (35 мин)
+
+_Без новых файлов — повторение._
+
+---
+
+## Шаг 2 — EXPLAIN (15 мин)
+
+Закрой файлы. Объясни **как коллеге**:
+
+1. Event loop
+2. this + prototype
+3. Closures + debounce
+4. HTML + flex/grid
+
+---
+
+## Шаг 3 — CODE (30 мин) ✍️
+
+`node mockInterview/questions.js 10`
+`node mockInterview/questions.js 1-10` опционально
+
+---
+
+## Шаг 4 — MOCK (10 мин)
 
 ```bash
-node mockInterview/questions.js 10       # повторение недели (5 вопросов)
-node mockInterview/questions.js 6-10     # опционально: по 1 с каждого дня
+node mockInterview/questions.js 10
 ```
 
-**→ [DAY_11.md](DAY_11.md)** — Next.js
+---
+
+## CHECK
+
+> ✅ Прогресс → [Issue](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md)
+
+- [ ] marathon вслух
+- [ ] mock W1
+
+**→ [DAY_11.md](DAY_11.md)** — TypeScript

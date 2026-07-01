@@ -1,35 +1,54 @@
-# День 20 — Повторение Senior-блоков (недели 3–4)
+# День 20 — Patterns + miniStateManager
 
-> Неделя 4, день 5 | ~3 ч
+> Неделя 4 из 6 | ~**2.5 ч** | max 2–3 theory-файла
 
-## EXPLAIN marathon (45 мин) — без файлов
+## Цель дня
 
-Отметь ❌ где слабо:
+Lazy/Portal/Error + код.
 
-- [ ] XSS — 3 вида + защита
-- [ ] CSRF — механизм + SameSite
-- [ ] Race condition + AbortController
-- [ ] Dedup + stale-while-revalidate
-- [ ] Layout → paint → composite
-- [ ] Layout thrashing
-- [ ] Code splitting — 3 стратегии
-- [ ] Focus trap + возврат фокуса
-- [ ] aria-hidden vs inert
+---
 
-## MOCK (45 мин)
+## Шаг 0 — SIMPLE (10 мин) ★
+
+**`theory/week2/SIMPLE_GUIDE.md`**
+
+---
+
+## Шаг 1 — READ (35 мин)
+
+| # | Файл |
+|---|------|
+| 1 | `theory/week2/advancedPatterns.jsx` |
+
+---
+
+## Шаг 2 — EXPLAIN (15 мин)
+
+Закрой файлы. Объясни **как коллеге**:
+
+1. Error Boundary
+2. Portal + lazy
+
+---
+
+## Шаг 3 — CODE (45 мин) ✍️
+
+`miniStateManager.js` → solutions
+
+---
+
+## Шаг 4 — MOCK (10 мин)
 
 ```bash
 node mockInterview/questions.js 20
 ```
 
-5 вопросов по Senior-темам недель 3–4 — ответы вслух
+---
 
 ## CHECK
 
-> ✅ Кликабельные чекбоксы → [Issue «Прогресс»](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md) · в Obsidian — отмечай ниже
+> ✅ Прогресс → [Issue](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md)
 
-- [ ] Могу объяснить XSS/CSRF за 2 мин
-- [ ] Могу нарисовать race condition словами
-- [ ] Знаю чем transform лучше left для анимаций
+- [ ] miniStateManager
 
-**→ [DAY_21.md](DAY_21.md)** — Архитектура
+**Завтра → [DAY_21.md](DAY_21.md)**

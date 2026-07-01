@@ -1,26 +1,55 @@
-# День 13 — XSS + CSRF ★ Senior
+# День 13 — TS: infer + conditional
 
-> Неделя 3, день 3 | ~2.5 ч
+> Неделя 3 из 6 | ~**2 ч** | max 2–3 theory-файла
 
-## READ (60 мин)
+## Цель дня
+
+TypeScript 3/4.
+
+---
+
+## Шаг 0 — SIMPLE (10 мин) ★
+
+**`theory/week2/SIMPLE_GUIDE.md`**
+
+---
+
+## Шаг 1 — READ (35 мин)
 
 | # | Файл |
 |---|------|
-| 1 | **`theory/week3/xssCsrf.md`** ← главный файл дня |
-| 2 | `theory/week3/security.js` | CSP кратко |
+| 1 | `theory/week2/inferTypes.ts` |
+| 2 | `theory/week2/conditionalTypes.ts` |
 
-## EXPLAIN вслух (must know)
+---
 
-1. XSS — три вида, что крадут, 3 способа защиты
-2. CSRF — как работает атака, SameSite + CSRF token
-3. Почему JWT **не** в localStorage
+## Шаг 2 — EXPLAIN (15 мин)
 
-## MOCK (20 мин)
+Закрой файлы. Объясни **как коллеге**:
+
+1. infer + ReturnType
+2. Conditional types
+
+---
+
+## Шаг 3 — CODE (30 мин) ✍️
+
+_—_
+
+---
+
+## Шаг 4 — MOCK (10 мин)
 
 ```bash
 node mockInterview/questions.js 13
 ```
 
-Главный вопрос вслух: «Объясни XSS и CSRF и как защититься» — 3 минуты без подсказок
+---
 
-**→ [DAY_14.md](DAY_14.md)** — Data fetching
+## CHECK
+
+> ✅ Прогресс → [Issue](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md)
+
+- [ ] infer + conditional
+
+**Завтра → [DAY_14.md](DAY_14.md)**

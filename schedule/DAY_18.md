@@ -1,32 +1,54 @@
-# День 18 — Доступные интерактивные компоненты ★ Senior
+# День 18 — Extra renders + useDebounce
 
-> Неделя 4, день 3 | ~2.5 ч
+> Неделя 4 из 6 | ~**2.5 ч** | max 2–3 theory-файла
 
-## READ (50 мин)
+## Цель дня
+
+Profiler + hand coding.
+
+---
+
+## Шаг 0 — SIMPLE (10 мин) ★
+
+**`theory/week2/SIMPLE_GUIDE.md`**
+
+---
+
+## Шаг 1 — READ (35 мин)
 
 | # | Файл |
 |---|------|
-| 1 | **`theory/week2/accessibleComponents.md`** ← главный файл дня |
-| 2 | `theory/week1/htmlCssA11y.js` | база семантики |
+| 1 | `theory/week2/extraRenders.jsx` |
 
-## EXPLAIN (Middle vs Senior)
+---
 
-| Middle | Senior |
-|--------|--------|
-| role="dialog", Escape | focus trap — зачем и как |
-| aria-label | возврат фокуса на триггер |
-| Radix из коробки | aria-hidden vs inert |
-| | prefers-reduced-motion |
-| | тест Tab + VoiceOver/NVDA |
+## Шаг 2 — EXPLAIN (15 мин)
 
-## Практика (20 мин)
+Закрой файлы. Объясни **как коллеге**:
 
-Открой любую модалку на сайте → пройди Tab с клавиатуры. Фокус уходит на фон? Это баг.
+1. 3 причины лишнего рендера
+2. Profiler
 
-## MOCK (15 мин)
+---
+
+## Шаг 3 — CODE (45 мин) ✍️
+
+`useDebounce.jsx` → solutions
+
+---
+
+## Шаг 4 — MOCK (10 мин)
 
 ```bash
 node mockInterview/questions.js 18
 ```
 
-**→ [DAY_19.md](DAY_19.md)**
+---
+
+## CHECK
+
+> ✅ Прогресс → [Issue](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md)
+
+- [ ] useDebounce руками
+
+**Завтра → [DAY_19.md](DAY_19.md)**

@@ -1,30 +1,55 @@
-# День 14 — Надёжная загрузка данных ★ Senior
+# День 14 — TS: mapped + declarations
 
-> Неделя 3, день 4 | ~3 ч
+> Неделя 3 из 6 | ~**2 ч** | max 2–3 theory-файла
 
-## READ (60 мин)
+## Цель дня
+
+TypeScript 4/4 — закрыт.
+
+---
+
+## Шаг 0 — SIMPLE (10 мин) ★
+
+**`theory/week2/SIMPLE_GUIDE.md`**
+
+---
+
+## Шаг 1 — READ (35 мин)
 
 | # | Файл |
 |---|------|
-| 1 | **`theory/week3/reliableDataFetching.md`** ← главный файл дня |
+| 1 | `theory/week2/mappedTypes.ts` |
+| 2 | `theory/week2/declorations.d.ts` |
 
-## EXPLAIN (Middle vs Senior)
+---
 
-| Middle | Senior (ты) |
-|--------|-------------|
-| try/catch + loading/error | + race condition |
-| async/await | + AbortController cleanup |
-| react-query «из коробки» | + dedup через Map, backoff, stale-while-revalidate |
-| AbortController «слышал» | + воспроизвести race condition |
+## Шаг 2 — EXPLAIN (15 мин)
 
-## CODE (90 мин) ✍️
+Закрой файлы. Объясни **как коллеге**:
 
-`practice/handCoding/miniReactQuery.js` → solutions
+1. Mapped types
+2. Зачем .d.ts
 
-Потом объясни вслух: **зачем TanStack Query**, если можно fetch в useEffect?
+---
 
-## MOCK
+## Шаг 3 — CODE (30 мин) ✍️
 
-`node mockInterview/questions.js 14`
+_—_
 
-**→ [DAY_15.md](DAY_15.md)**
+---
+
+## Шаг 4 — MOCK (10 мин)
+
+```bash
+node mockInterview/questions.js 14
+```
+
+---
+
+## CHECK
+
+> ✅ Прогресс → [Issue](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md)
+
+- [ ] TS блок закрыт
+
+**→ [DAY_15.md](DAY_15.md)** — React

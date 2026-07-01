@@ -1,29 +1,56 @@
-# День 8 — Hooks + Memo + Extra Renders
+# День 8 — Reflow база + задачи
 
-> Неделя 2, день 3 | ~3 ч
+> Неделя 2 из 6 | ~**2.5 ч** | max 2–3 theory-файла
 
-## READ (50 мин)
+## Цель дня
+
+Skim reflow + 2 задачи.
+
+---
+
+## Шаг 0 — SIMPLE (10 мин) ★
+
+**`reflowRepaint.md`** — 15 мин skim
+
+---
+
+## Шаг 1 — READ (35 мин)
 
 | # | Файл |
 |---|------|
-| 1 | `theory/week2/hooksOverview.jsx` |
-| 2 | `theory/week2/useEffectUseLayoutEffect.jsx` |
-| 3 | `theory/week2/useMemoUseCallback.jsx` |
-| 4 | `theory/week2/extraRenders.jsx` |
+| 1 | `theory/week1/renderingPipeline.js` |
 
-## EXPLAIN
+---
 
-- Правила hooks
-- useEffect vs useLayoutEffect
-- Когда useMemo реально нужен
-- Как найти лишний рендер (Profiler)
+## Шаг 2 — EXPLAIN (15 мин)
 
-## CODE (90 мин) ✍️
+Закрой файлы. Объясни **как коллеге**:
 
-`practice/handCoding/useDebounce.jsx` → solutions
+1. Reflow vs repaint
+2. transform vs left — интуиция
 
-## MOCK
+---
 
-`node mockInterview/questions.js 8`
+## Шаг 3 — CODE (45 мин) ✍️
 
-**→ [DAY_09.md](DAY_09.md)**
+1. `reflowRepaint.md` skim
+2. `myFilter.js` + `isPalindrome.js`
+
+---
+
+## Шаг 4 — MOCK (10 мин)
+
+```bash
+node mockInterview/questions.js 8
+```
+
+---
+
+## CHECK
+
+> ✅ Прогресс → [Issue](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md)
+
+- [ ] reflow skim
+- [ ] 2 tasks решил
+
+**Завтра → [DAY_09.md](DAY_09.md)**

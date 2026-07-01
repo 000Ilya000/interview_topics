@@ -1,10 +1,10 @@
-# День 23 — Next.js: App Router + RSC
+# День 26 — Data fetching ★
 
-> Неделя 5 из 6 | ~**2 ч** | max 2–3 theory-файла
+> Неделя 6 из 6 | ~**2.5 ч** | max 2–3 theory-файла
 
 ## Цель дня
 
-Next 2/2.
+Race + miniReactQuery.
 
 ---
 
@@ -18,8 +18,7 @@ Next 2/2.
 
 | # | Файл |
 |---|------|
-| 1 | `theory/week3/appRouter.jsx` |
-| 2 | `theory/week3/serverComponents.jsx` |
+| 1 | `theory/week3/reliableDataFetching.md` |
 
 ---
 
@@ -27,21 +26,22 @@ Next 2/2.
 
 Закрой файлы. Объясни **как коллеге**:
 
-1. Server vs Client
-2. use client
+1. Race + AbortController
+2. Stale-while-revalidate
+3. TanStack Query
 
 ---
 
-## Шаг 3 — CODE (30 мин) ✍️
+## Шаг 3 — CODE (45 мин) ✍️
 
-_—_
+`miniReactQuery.js` → solutions
 
 ---
 
 ## Шаг 4 — MOCK (10 мин)
 
 ```bash
-node mockInterview/questions.js 23
+node mockInterview/questions.js 26
 ```
 
 ---
@@ -50,6 +50,7 @@ node mockInterview/questions.js 23
 
 > ✅ Прогресс → [Issue](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md)
 
-- [ ] App Router + RSC
+- [ ] data fetching md
+- [ ] miniReactQuery
 
-**Завтра → [DAY_24.md](DAY_24.md)**
+**Завтра → [DAY_27.md](DAY_27.md)**

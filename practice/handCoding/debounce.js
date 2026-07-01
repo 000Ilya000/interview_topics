@@ -4,5 +4,9 @@
 //! debounce(fn, delay) — вызов fn только после delay мс паузы
 
 export function debounce(fn, delay) {
-  // TODO: твоя реализация
+  let timerId;
+  return function(...args) {
+    clearTimeout(timerId)
+    timerId = setTimeout(() => fn.apply(this, args), delay)
+  }
 }

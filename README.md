@@ -1,4 +1,4 @@
-# Senior Frontend — 25 рабочих дней
+# Senior Frontend — 28 рабочих дней (~2–2.5 ч/день)
 
 **Старт в понедельник?** → [BEFORE_START.md](BEFORE_START.md)  
 **Каждый день** → [schedule/DAY_01.md](schedule/DAY_01.md)  

@@ -1,31 +1,61 @@
-# День 4 — Memory + Reflow (база) + Collections
+# День 4 — Функции + методы массивов
 
-> Неделя 1, день 4 | ~3 ч
+> Неделя 1 из 6 | ~**2 ч** | max 2–3 theory-файла
 
-## READ (50 мин)
+## Цель дня
 
-| # | Файл | Уровень |
-|---|------|---------|
-| 1 | `theory/week1/memoryLeaks.js` | база |
-| 2 | `theory/week1/renderingPipeline.js` | база — layout/paint/composite |
-| 3 | `theory/week1/reflowRepaint.md` | **пробежаться** — Senior-версия будет DAY 16 |
-| 4 | `theory/week1/arrayMapSetWeakMapWeakSet.js` | база |
-| 5 | `theory/week1/immutability.js` | база |
+Function vs arrow и map/filter/reduce — отдельный день, без prototypes.
 
-## EXPLAIN
+---
 
-- 3 причины memory leak
-- Reflow дороже repaint — **одним предложением**
-- Map vs Object
+## Шаг 0 — SIMPLE (10 мин) ★
 
-## CODE
+**`theory/week1/SIMPLE_GUIDE.md`** — functions, arrays
 
-`practice/tasks-js/myFilter.js`, `practice/tasks-js/isPalindrome.js`
+---
 
-## MOCK (15 мин)
+## Шаг 1 — READ (35 мин)
+
+| # | Файл |
+|---|------|
+| 1 | `theory/week1/functionsTypes.js` |
+| 2 | `theory/week1/arrayMethods.js` |
+
+```bash
+node theory/week1/arrayMethods.js
+```
+
+---
+
+## Шаг 2 — EXPLAIN (15 мин)
+
+Закрой файлы. Объясни **как коллеге**:
+
+1. Function declaration vs arrow vs expression
+2. map vs filter vs reduce
+3. Mutating vs non-mutating
+
+---
+
+## Шаг 3 — CODE (30 мин) ✍️
+
+3 примера map/filter/reduce на бумаге.
+
+---
+
+## Шаг 4 — MOCK (10 мин)
 
 ```bash
 node mockInterview/questions.js 4
 ```
 
-**→ [DAY_05.md](DAY_05.md)**
+---
+
+## CHECK
+
+> ✅ Прогресс → [Issue](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md)
+
+- [ ] functions + arrays прочитал
+- [ ] map/filter/reduce вслух
+
+**Завтра → [DAY_05.md](DAY_05.md)**

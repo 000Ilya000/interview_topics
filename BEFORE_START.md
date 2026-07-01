@@ -12,7 +12,7 @@
 ### 1. Прочитай (20 мин)
 - [ ] [START_HERE.md](START_HERE.md) — как устроен курс
 - [ ] [exploreTopics.js](exploreTopics.js) — пробегись глазами, **не учи**
-- [ ] [schedule/README.md](schedule/README.md) — таблица 25 дней
+- [ ] [schedule/README.md](schedule/README.md) — таблица **28** дней
 
 ### 2. Проверь setup (10 мин)
 
@@ -74,7 +74,9 @@ node theory/week1/eventLoop.js      # должны быть console.log
 
 ---
 
-## 25 дней — реалистичные ожидания
+## 28 дней — реалистичные ожидания
+
+~**2–2.5 часа в день**, max 2–3 theory-файла. TypeScript — **4 дня**, не один.
 
 | К концу недели | Ты можешь |
 |----------------|-----------|

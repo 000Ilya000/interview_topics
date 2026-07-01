@@ -1,24 +1,56 @@
-# День 15 — Повторение недели 3
+# День 15 — Reconciliation + Fiber
 
-> Неделя 3, день 5 | ~3 ч
+> Неделя 3 из 6 | ~**2 ч** | max 2–3 theory-файла
 
-## EXPLAIN (30 мин) — без файлов
+## Цель дня
 
-1. SSR vs SSG — когда что
-2. XSS vs CSRF — разница и защита
-3. Race condition — как воспроизвести и fix
-4. AbortController + cleanup
-5. Stale-while-revalidate — одним предложением
+Virtual DOM без hooks.
 
-## CODE
+---
 
-miniReactQuery — перепиши из памяти (30 мин)
+## Шаг 0 — SIMPLE (10 мин) ★
 
-## MOCK (30 мин)
+**`theory/week2/SIMPLE_GUIDE.md`**
+
+---
+
+## Шаг 1 — READ (35 мин)
+
+| # | Файл |
+|---|------|
+| 1 | `theory/week2/reconciliation.jsx` |
+| 2 | `theory/week2/fiber.jsx` |
+
+---
+
+## Шаг 2 — EXPLAIN (15 мин)
+
+Закрой файлы. Объясни **как коллеге**:
+
+1. Reconciliation
+2. index key
+3. Fiber
+
+---
+
+## Шаг 3 — CODE (30 мин) ✍️
+
+_—_
+
+---
+
+## Шаг 4 — MOCK (10 мин)
 
 ```bash
-node mockInterview/questions.js 15       # повторение недели (5 вопросов)
-node mockInterview/questions.js 11-15    # опционально: по 1 с каждого дня
+node mockInterview/questions.js 15
 ```
 
-**→ [DAY_16.md](DAY_16.md)** — Reflow Senior
+---
+
+## CHECK
+
+> ✅ Прогресс → [Issue](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md)
+
+- [ ] recon + fiber вслух
+
+**Завтра → [DAY_16.md](DAY_16.md)**

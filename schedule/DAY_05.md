@@ -1,34 +1,60 @@
-# День 5 — Повторение недели 1
+# День 5 — Destructuring
 
-> Неделя 1, день 5 | ~3 ч
+> Неделя 1 из 6 | ~**2 ч** | max 2–3 theory-файла
 
-## EXPLAIN (30 мин) — без файлов
+## Цель дня
 
-1. Event loop + Promise vs setTimeout
-2. Debounce vs throttle
-3. Closures
-4. this + prototypes
-5. HTML семантика + flex vs grid
+Spread/rest и деструктуризация.
 
-## CODE (90 мин) ✍️
+---
 
-1. `practice/handCoding/eventEmitter.js` → solutions
-2. Перепиши debounce + throttle **из памяти**
-3. `practice/tasks-js/singleNumber.js`
+## Шаг 0 — SIMPLE (10 мин) ★
 
-## MOCK (30 мин)
+**`theory/week1/SIMPLE_GUIDE.md`** — destructuring
+
+---
+
+## Шаг 1 — READ (35 мин)
+
+| # | Файл |
+|---|------|
+| 1 | `theory/week1/distructure.js` |
 
 ```bash
-node mockInterview/questions.js 5        # повторение недели (5 вопросов)
-node mockInterview/questions.js 1-5      # опционально: по 1 с каждого дня
+node theory/week1/distructure.js
 ```
+
+---
+
+## Шаг 2 — EXPLAIN (15 мин)
+
+Закрой файлы. Объясни **как коллеге**:
+
+1. Destructuring object/array
+2. Rest vs spread
+3. Defaults в destructuring
+
+---
+
+## Шаг 3 — CODE (30 мин) ✍️
+
+`practice/tasks-js/findVowels.js` — **без AI**
+
+---
+
+## Шаг 4 — MOCK (10 мин)
+
+```bash
+node mockInterview/questions.js 5
+```
+
+---
 
 ## CHECK
 
-> ✅ Кликабельные чекбоксы → [Issue «Прогресс»](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md) · в Obsidian — отмечай ниже
+> ✅ Прогресс → [Issue](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md)
 
-- [ ] EventEmitter написан руками
-- [ ] debounce/throttle из памяти
-- [ ] 5 тем объяснил без подсказок
+- [ ] distructure прочитал
+- [ ] findVowels решил
 
-**→ [DAY_06.md](DAY_06.md)** — TypeScript
+**→ [DAY_06.md](DAY_06.md)** — неделя 2
