@@ -1,24 +1,28 @@
-# День 26 — Data fetching ★
+# День 26 — Reliable data fetching ★ + miniReactQuery
 
-> Неделя 6 из 6 | ~**2.5 ч** | max 2–3 theory-файла
+> Неделя 6 из 6 | ~**2.5 ч** | 1 md + hand coding
 
 ## Цель дня
 
-Race + miniReactQuery.
+**Race conditions**, AbortController, stale-while-revalidate, паттерны как в TanStack Query. Написать **miniReactQuery** руками.
 
 ---
 
 ## Шаг 0 — SIMPLE (10 мин) ★
 
-**`theory/week3/SIMPLE_GUIDE.md`**
+| # | Файл |
+|---|------|
+| 0 | **`theory/week3/SIMPLE_GUIDE.md`** — Data fetching |
 
 ---
 
-## Шаг 1 — READ (35 мин)
+## Шаг 1 — READ (40 мин)
 
-| # | Файл |
-|---|------|
-| 1 | `theory/week3/reliableDataFetching.md` |
+| # | Файл | Зачем |
+|---|------|-------|
+| 1 | `theory/week3/reliableDataFetching.md` | Race, abort, cache, dedupe, optimistic UI |
+
+Прочитай внимательно — связь с DAY 20 (Query) и DAY 24 (fetch).
 
 ---
 
@@ -26,15 +30,21 @@ Race + miniReactQuery.
 
 Закрой файлы. Объясни **как коллеге**:
 
-1. Race + AbortController
-2. Stale-while-revalidate
-3. TanStack Query
+1. Race condition в search — как AbortController fix?
+2. stale-while-revalidate — UX vs freshness
+3. Dedupe одинаковых запросов — зачем?
+4. Optimistic update — rollback on error
 
 ---
 
-## Шаг 3 — CODE (45 мин) ✍️
+## Шаг 3 — CODE (55 мин) ✍️ **без AI**
 
-`miniReactQuery.js` → solutions
+| # | Задача | Файл |
+|---|--------|------|
+| 1 | Mini React Query | `practice/handCoding/miniReactQuery.js` |
+| 2 | Сверка | `practice/handCoding/solutions/miniReactQuery.js` |
+
+На бумаге: state machine `idle → loading → success | error`.
 
 ---
 
@@ -50,7 +60,8 @@ node mockInterview/questions.js 26
 
 > ✅ Прогресс → [Issue](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md)
 
-- [ ] data fetching md
-- [ ] miniReactQuery
+- [ ] reliableDataFetching.md прочитал
+- [ ] race + abort объяснил
+- [ ] miniReactQuery написал руками
 
-**Завтра → [DAY_27.md](DAY_27.md)**
+**Завтра → [DAY_27.md](DAY_27.md)** — Reflow ★ + Code splitting ★

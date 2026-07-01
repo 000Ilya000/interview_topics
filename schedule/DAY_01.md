@@ -1,10 +1,10 @@
-# День 1 — HTML/CSS + Event Loop (начало)
+# День 1 — HTML/CSS + Event Loop
 
-> Неделя 1 из 5 | Понедельник | ~3 ч
+> Неделя 1 из 6 | ~**3 ч** | 4 theory-файла (старт курса — чуть плотнее)
 
 ## Цель дня
 
-Объяснить простыми словами: семантику HTML, flex vs grid, и **почему Promise раньше setTimeout**.
+Понять **семантику HTML**, **flex vs grid** и **event loop** — почему `Promise` выполняется раньше `setTimeout`. Это база для всего JS и React дальше.
 
 ---
 
@@ -12,20 +12,20 @@
 
 | # | Файл |
 |---|------|
-| 0 | **`theory/week1/SIMPLE_GUIDE.md`** — HTML/CSS + Event Loop простым языком |
+| 0 | **`theory/week1/SIMPLE_GUIDE.md`** — разделы «HTML/CSS» и «Event Loop» |
 
-Прочитай разделы до Promises. Не лезь в `.js` пока не прочитал.
+Прочитай до блока Promises. Не открывай `.js`, пока не прочитал SIMPLE.
 
 ---
 
 ## Шаг 1 — READ (40 мин)
 
-| # | Файл |
-|---|------|
-| 1 | `theory/week1/htmlCssA11y.js` |
-| 2 | `theory/week1/metaTags.html` |
-| 3 | `theory/week1/browserInternals.js` |
-| 4 | `theory/week1/eventLoop.js` |
+| # | Файл | Зачем |
+|---|------|-------|
+| 1 | `theory/week1/htmlCssA11y.js` | Семантика, flex/grid, базовая a11y |
+| 2 | `theory/week1/metaTags.html` | SEO, Open Graph |
+| 3 | `theory/week1/browserInternals.js` | Как браузер грузит страницу |
+| 4 | `theory/week1/eventLoop.js` | Call stack, microtasks, macrotasks |
 
 ```bash
 node theory/week1/browserInternals.js
@@ -36,18 +36,20 @@ node theory/week1/eventLoop.js
 
 ## Шаг 2 — EXPLAIN (15 мин)
 
-Закрой файлы. Объясни **как коллеге**, без терминов:
+Закрой файлы. Объясни **как коллеге**, без заученных терминов:
 
-1. article vs section — пример из жизни (пост vs раздел)
-2. flex vs grid — «ряд кнопок» vs «сетка карточек»
-3. Event loop — «очередь в банке: sync → Promise → setTimeout»
-4. Почему вывод `1, 4, 3, 2`?
+1. `article` vs `section` — пример из жизни (пост в блоге vs раздел «О нас»)
+2. Flex vs grid — «ряд кнопок в шапке» vs «сетка карточек товаров»
+3. Event loop — «очередь в банке: сначала sync, потом Promise, потом setTimeout»
+4. Почему в примере вывод `1, 4, 3, 2`? Нарисуй порядок на бумаге.
 
 ---
 
 ## Шаг 3 — CODE (60 мин)
 
-Измени порядок `setTimeout`/`Promise` в `eventLoop.js` — предскажи вывод, проверь `node`.
+1. Открой `theory/week1/eventLoop.js` — поменяй порядок `setTimeout` / `Promise` / `console.log`
+2. **Сначала предскажи** вывод, потом проверь через `node`
+3. Сделай 3 варианта: sync-only, Promise-first, setTimeout-first
 
 ---
 
@@ -57,15 +59,17 @@ node theory/week1/eventLoop.js
 node mockInterview/questions.js 1
 ```
 
+Ответь вслух. Запиши 1 тему, где запнулся.
+
 ---
 
 ## CHECK
 
-> ✅ Кликабельные чекбоксы → [Issue «Прогресс»](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md) · в Obsidian — отмечай ниже
+> ✅ Прогресс → [Issue](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md)
 
-- [ ] SIMPLE_GUIDE прочитан
-- [ ] 4 темы объяснил простым языком
-- [ ] event loop примеры прогнал
+- [ ] SIMPLE_GUIDE (HTML + Event Loop) прочитан
+- [ ] 4 theory-файла прочитал
+- [ ] event loop объяснил и поиграл с примерами
 - [ ] mock-вопрос вслух
 
-**Завтра → [DAY_02.md](DAY_02.md)**
+**Завтра → [DAY_02.md](DAY_02.md)** — Promises, closures, debounce/throttle

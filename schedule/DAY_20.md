@@ -1,24 +1,27 @@
-# День 20 — Patterns + miniStateManager
+# День 20 — Advanced patterns + state management + miniStateManager
 
-> Неделя 4 из 6 | ~**2.5 ч** | max 2–3 theory-файла
+> Неделя 4 из 6 | ~**2.5 ч** | 2 theory-файла + hand coding
 
 ## Цель дня
 
-Lazy/Portal/Error + код.
+**Error Boundary, Portal, lazy/Suspense** — паттерны production-кода. **State management** — когда Query / Zustand / RTK. Плюс **miniStateManager** руками.
 
 ---
 
 ## Шаг 0 — SIMPLE (10 мин) ★
 
-**`theory/week2/SIMPLE_GUIDE.md`**
+| # | Файл |
+|---|------|
+| 0 | **`theory/week2/SIMPLE_GUIDE.md`** — Patterns + State |
 
 ---
 
-## Шаг 1 — READ (35 мин)
+## Шаг 1 — READ (40 мин)
 
-| # | Файл |
-|---|------|
-| 1 | `theory/week2/advancedPatterns.jsx` |
+| # | Файл | Зачем |
+|---|------|-------|
+| 1 | `theory/week2/advancedPatterns.jsx` | Error Boundary, Portal, lazy, compound components |
+| 2 | `theory/week4/stateManagement.jsx` | Server vs client state, Query, Zustand, RTK |
 
 ---
 
@@ -26,14 +29,21 @@ Lazy/Portal/Error + код.
 
 Закрой файлы. Объясни **как коллеге**:
 
-1. Error Boundary
-2. Portal + lazy
+1. Error Boundary — что ловит, что **не** ловит?
+2. Portal — модалка, z-index, a11y
+3. `React.lazy` + Suspense — code splitting на уровне компонента
+4. Server state vs UI state — куда что класть?
 
 ---
 
-## Шаг 3 — CODE (45 мин) ✍️
+## Шаг 3 — CODE (55 мин) ✍️ **без AI**
 
-`miniStateManager.js` → solutions
+| # | Задача | Файл |
+|---|--------|------|
+| 1 | Mini state manager (pub/sub) | `practice/handCoding/miniStateManager.js` |
+| 2 | Сверка | `practice/handCoding/solutions/miniStateManager.js` |
+
+На бумаге: набросай API `createStore(subscribe, getState, setState)`.
 
 ---
 
@@ -49,6 +59,8 @@ node mockInterview/questions.js 20
 
 > ✅ Прогресс → [Issue](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md)
 
-- [ ] miniStateManager
+- [ ] advancedPatterns + stateManagement прочитал
+- [ ] Error Boundary + Portal объяснил
+- [ ] miniStateManager написал руками
 
-**Завтра → [DAY_21.md](DAY_21.md)**
+**Завтра → [DAY_21.md](DAY_21.md)** — Review недели 2 (TS + React)

@@ -1,25 +1,29 @@
-# День 23 — Next.js: App Router + RSC
+# День 23 — Next.js 2/2: App Router + Server Components
 
-> Неделя 5 из 6 | ~**2 ч** | max 2–3 theory-файла
+> Неделя 5 из 6 | ~**2–2.5 ч** | 2 theory-файла
 
 ## Цель дня
 
-Next 2/2.
+**App Router**, **Server vs Client Components**, `'use client'` — главная тема Next.js на Senior собесе.
 
 ---
 
 ## Шаг 0 — SIMPLE (10 мин) ★
 
-**`theory/week3/SIMPLE_GUIDE.md`**
+| # | Файл |
+|---|------|
+| 0 | **`theory/week3/SIMPLE_GUIDE.md`** — App Router + RSC |
 
 ---
 
 ## Шаг 1 — READ (35 мин)
 
-| # | Файл |
-|---|------|
-| 1 | `theory/week3/appRouter.jsx` |
-| 2 | `theory/week3/serverComponents.jsx` |
+| # | Файл | Зачем |
+|---|------|-------|
+| 1 | `theory/week3/appRouter.jsx` | app/, layout, page, loading, error |
+| 2 | `theory/week3/serverComponents.jsx` | RSC, boundaries, fetch on server |
+
+Optional skim (если останется время): `theory/week3/streaming.jsx`
 
 ---
 
@@ -27,14 +31,26 @@ Next 2/2.
 
 Закрой файлы. Объясни **как коллеге**:
 
-1. Server vs Client
-2. use client
+1. Server Component — что **можно** и **нельзя**? (hooks, onClick)
+2. Когда нужен `'use client'`?
+3. layout.js vs page.js — nesting
+4. loading.js / error.js — зачем?
 
 ---
 
-## Шаг 3 — CODE (30 мин) ✍️
+## Шаг 3 — CODE (35 мин) ✍️
 
-_—_
+На бумаге — разметь компоненты:
+
+```
+App
+├── Header (logo, nav links)
+├── ProductList (fetch API)
+├── AddToCartButton (onClick)
+└── Footer
+```
+
+Для каждого: **Server** или **Client** + почему.
 
 ---
 
@@ -50,6 +66,8 @@ node mockInterview/questions.js 23
 
 > ✅ Прогресс → [Issue](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md)
 
-- [ ] App Router + RSC
+- [ ] appRouter + serverComponents прочитал
+- [ ] Server vs Client — с примерами
+- [ ] дерево компонентов разметил
 
-**Завтра → [DAY_24.md](DAY_24.md)**
+**Завтра → [DAY_24.md](DAY_24.md)** — HTTP + CORS + JWT
