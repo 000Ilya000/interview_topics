@@ -1,8 +1,21 @@
-# Неделя 1 — простым языком (DAY 01–05)
+# Неделя 1–2 — JS + Browser (DAY 01–10)
 
-> Читай **до** `.js` файлов. Одна неделя = HTML/CSS + весь базовый JS + браузер.  
-> Расписание: `schedule/DAY_01` … `DAY_05`  
-> Чекбоксы ниже: самопроверка. На GitHub не кликаются → [Issue «Прогресс»](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md) или Obsidian.
+> Читай **до** `.js` файлов.  
+> Расписание: `schedule/DAY_01` … `DAY_10` · Карта: `schedule/COURSE_MAP.md`  
+> Чекбоксы — самопроверка. На GitHub не кликаются → [Issue «Прогресс»](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md)
+
+| День | Тема | Файлы |
+|------|------|-------|
+| 01 | HTML/CSS + Event Loop | `htmlCssA11y.js`, `metaTags.html`, `browserInternals.js`, `eventLoop.js` |
+| 02 | Promises + Closures + Debounce | `promiseChain.js`, `promiseObject.js`, `circuitFunction.js`, `debounceThrottle.js` |
+| 03 | this + prototypes + basics | `this.js`, `prototypes.js`, `dataTypes.js`, `variables.js`, `operatorsTypes.js` |
+| 04 | Функции + массивы | `functionsTypes.js`, `arrayMethods.js` |
+| 05 | Destructuring + строки | `distructure.js`, `stringsMethods.js` |
+| 06 | Memory + immutability | `memoryLeaks.js`, `immutability.js`, `structuredCloneSomeArrAt.js` |
+| 07 | Map/Set + rendering pipeline | `arrayMapSetWeakMapWeakSet.js`, `renderingPipeline.js` |
+| 08 | Reflow база + задачи | `reflowRepaint.md` |
+| 09 | Hand coding W1 | `practice/handCoding/eventEmitter.js` |
+| 10 | **Review W1** | marathon + mock 1–10 |
 
 ---
 
@@ -12,79 +25,53 @@
 
 Сайт = **структура** (HTML) + **вид** (CSS) + **поведение** (JS).
 
-### Семантические теги — зачем не только `<div>`
+### Семантические теги
 
 | Тег | Простыми словами | Жизнь |
 |-----|------------------|-------|
-| `<header>` | Шапка | Логотип, верхнее меню |
-| `<nav>` | Навигация | Меню ссылок |
-| `<main>` | **Главный** контент. **Один** на страницу | Сама статья, не sidebar |
-| `<article>` | Самодостаточный блок | Пост, карточка товара, комментарий |
-| `<section>` | Тематический раздел | «Отзывы», «Цены», «О нас» |
-| `<aside>` | Боковой контент | Реклама, похожие статьи |
-| `<footer>` | Подвал | Копирайт, ссылки |
+| `<header>` | Шапка | Логотип, меню |
+| `<nav>` | Навигация | Ссылки |
+| `<main>` | **Главный** контент, **один** на страницу | Статья, не sidebar |
+| `<article>` | Самодостаточный блок | Пост, карточка товара |
+| `<section>` | Тематический раздел | «Отзывы», «Цены» |
+| `<aside>` | Боковой контент | Реклама |
+| `<footer>` | Подвал | Копирайт |
 
-**На собесе:** `article` можно «вырезать» и он имеет смысл сам. `section` — часть большой страницы.
+**На собесе:** `article` можно «вырезать» — имеет смысл сам. `section` — часть большой страницы.
 
 ### Flex vs Grid
 
-**Flex** — одна линия (ряд **или** колонка):
-```css
-.navbar {
-  display: flex;
-  justify-content: space-between; /* по горизонтали */
-  align-items: center;            /* по вертикали */
-  gap: 16px;
-}
-```
-*Жизнь:* кнопки в navbar, центрировать иконку, выровнять label + input.
+**Flex** — одна линия (ряд **или** колонка). *Жизнь:* кнопки в navbar.  
+**Grid** — строки **и** колонки. *Жизнь:* сетка карточек.
 
-**Grid** — таблица (строки **и** колонки):
-```css
-.catalog {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-```
-*Жизнь:* сетка карточек товаров, layout всей страницы.
+**Правило:** navbar → flex. Layout страницы → grid.
 
-**Правило:** navbar → flex. Страница целиком → grid.
+### a11y — база
 
-### z-index «не работает»
-
-`z-index: 9999` не помог — скорее всего элемент в **другом stacking context** (другом «здании»).
-
-Создаёт новое здание: `transform`, `opacity < 1`, `filter`, `position + z-index`.
-
-### a11y — база (спросят в начале)
-
-- **Semantic HTML** лучше, чем `div` + `role` наугад
-- **Tab** — можно пройти всю форму с клавиатуры
-- **Контраст** текста — минимум 4.5:1 (тёмный текст на светлом фоне)
-- **alt** у картинок — что на изображении
-
-📖 [MDN: Accessibility](https://developer.mozilla.org/en-US/docs/Learn/Accessibility)
+- Semantic HTML лучше `div` + `role`
+- **Tab** — форма проходится с клавиатуры
+- **alt** у картинок
+- Контраст текста ~4.5:1
 
 ### Мета-теги — `metaTags.html`
 
 | Тег | Зачем |
 |-----|-------|
-| `viewport` | Сайт нормально на телефоне |
-| `description` | Описание в Google |
-| `og:title`, `og:image` | Превью в Telegram/VK |
+| `viewport` | Нормально на телефоне |
+| `description` | SEO |
+| `og:title`, `og:image` | Превью в мессенджерах |
 
 ---
 
 ## Event Loop — «один кассир в банке»
 
-JS **однопоточный** = один кассир. Две задачи одновременно не выполняет.
+JS **однопоточный**. Порядок:
 
 ```
-1. Синхронный код (всё подряд в файле)
+1. Синхронный код
 2. ВСЕ microtasks (Promise, await)
 3. ОДИН macrotask (setTimeout, click)
-4. Снова microtasks → macrotask → …
+4. Снова microtasks → …
 ```
 
 ```js
@@ -95,337 +82,232 @@ console.log('4');
 // 1 → 4 → 3 → 2
 ```
 
-**Почему?** `setTimeout(0)` = «талончик на следующий заход». Promise = VIP-очередь.
-
-**async/await** — синтаксический сахар над Promise. Каждый `await` = microtask.
-
-📖 [Loupe — визуализация event loop](https://latentflip.com/loupe/)
-
-**Файлы:** `browserInternals.js`, `eventLoop.js`
+📖 [Loupe — event loop](https://latentflip.com/loupe/)
 
 ---
 
 # DAY 02 — Promises + Closures + Debounce
 
-## Promises — «обещание результата»
+## Promises
 
-```js
-fetch('/api/user')
-  .then(res => {
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    return res.json();
-  })
-  .then(user => console.log(user))
-  .catch(err => console.error(err))
-  .finally(() => console.log('готово'));
-```
+| Метод | Жизнь |
+|-------|-------|
+| `Promise.all` | Все или никто |
+| `Promise.allSettled` | Все результаты |
+| `Promise.race` | Кто первый |
+| `Promise.any` | Первый **успешный** |
 
-**Важно:** `fetch` **не** кидает ошибку на 404 — проверяй `res.ok`.
-
-| Метод | Простыми словами | Жизнь |
-|-------|------------------|-------|
-| `Promise.all` | Все или никто | 3 курьера — один опоздал, заказ отменён |
-| `Promise.allSettled` | Все результаты, кто как | Опрос 5 друзей — кто-то не ответил, ок |
-| `Promise.race` | Кто первый | Первый ответивший API |
-| `Promise.any` | Первый **успешный** | Зеркало CDN — первое живое |
-
-**async/await** — читается как sync, но не блокирует UI:
-```js
-async function loadUser() {
-  try {
-    const res = await fetch('/api/user');
-    const user = await res.json();
-    return user;
-  } catch (e) {
-    showError(e);
-  }
-}
-```
-
-**Файлы:** `promiseChain.js`, `promiseObject.js`
-
----
+**Важно:** `fetch` не кидает на 404 — проверяй `res.ok`.
 
 ## Closures — «функция с памятью»
 
 ```js
 function createCounter() {
   let count = 0;
-  return {
-    inc: () => ++count,
-    get: () => count,
-  };
+  return { inc: () => ++count, get: () => count };
 }
-const c = createCounter();
-c.inc(); // 1
-c.inc(); // 2
-// count снаружи недоступен — приватный
 ```
 
-*Жизнь:* банкомат помнит сессию. Снаружи не видно внутренний счётчик.
-
-**Где используется:** debounce, throttle, модули, React hooks (state «запоминается» между рендерами).
-
-**Ловушка на собесе:** `var` в цикле — одна переменная. `let` — своя на каждую итерацию.
-
-**Файл:** `circuitFunction.js`
-
----
+*Жизнь:* debounce, throttle, React hooks.
 
 ## Debounce vs Throttle
 
-**Debounce** — вызов **после паузы**:
-```js
-// Поиск: запрос когда перестал печатать 300ms
-const onSearch = debounce((q) => fetch(`/api?q=${q}`), 300);
-```
-*Жизнь:* лифт едет, когда перестали жать кнопку.
-
-**Throttle** — не чаще N раз:
-```js
-// Scroll: обработчик max раз в 100ms
-const onScroll = throttle(updatePosition, 100);
-```
-*Жизнь:* лифт — не чаще 1 раза в 2 сек, сколько ни жми.
+**Debounce** — после паузы (поиск в input).  
+**Throttle** — не чаще N раз (scroll).
 
 **Hand coding:** `practice/handCoding/debounce.js`, `throttle.js`
-
-**Файл:** `debounceThrottle.js`
 
 ---
 
 # DAY 03 — this + Prototypes + JS basics
 
+> Только этот блок — **без** массивов и memory (они с DAY 04).
+
 ## this — «кто вызвал»
 
 ```js
-const user = {
-  name: 'Илья',
-  greet() { console.log(this.name); }
-};
-user.greet(); // 'Иlya'
-
+const user = { name: 'Илья', greet() { console.log(this.name); } };
+user.greet(); // 'Илья'
 const fn = user.greet;
 fn(); // undefined — потеряли контекст
 ```
 
-**call / apply / bind:**
-```js
-function sayHi() { console.log('Привет, ' + this.name); }
-sayHi.call({ name: 'Аня' });        // call — аргументы списком
-sayHi.apply({ name: 'Аня' });       // apply — аргументы массивом
-const bound = sayHi.bind({ name: 'Аня' }); // bind — новая функция
-bound();
-```
+**call / apply / bind** — привязать `this`.  
+**Arrow** — `this` откуда **написана**, не для методов- callbacks.
 
-**Стрелочная функция** — `this` откуда **написана**, не откуда вызвана. Не подходит для методов объекта, которые передаёшь как callback.
-
-**Файл:** `this.js`
-
----
-
-## Prototypes — «цепочка наследования»
+## Prototypes
 
 ```js
 const animal = { eats: true };
 const rabbit = { jumps: true };
-rabbit.__proto__ = animal; // или Object.setPrototypeOf
-console.log(rabbit.eats); // true — нашли в animal
+Object.setPrototypeOf(rabbit, animal);
+console.log(rabbit.eats); // true
 ```
 
-`class` в JS — **сugar** над прототипами. Под капотом то же самое.
-
-**Файл:** `prototypes.js`
-
----
+`class` — sugar над прототипами.
 
 ## var / let / const
 
 | | var | let | const |
 |---|-----|-----|-------|
-| Область | функция | блок `{}` | блок |
-| Переприсвоить | да | да | нет (ссылку) |
-| Hoisting | да, `undefined` | TDZ до строки | TDZ |
+| Область | функция | блок | блок |
+| Hoisting | да | TDZ | TDZ |
 
-```js
-const user = { name: 'Илья' };
-user.name = 'Петя'; // ✅ объект меняется
-// user = {}           // ❌ const
-```
+## Типы и операторы
 
-**Файл:** `variables.js`
+**Примитивы** — копия. **Объекты** — ссылка.
 
----
-
-## Типы данных
-
-**Примитивы** (копия): `string`, `number`, `boolean`, `null`, `undefined`, `symbol`, `bigint`  
-**Объекты** (ссылка): `{}`, `[]`, функции
-
-```js
-const a = [1, 2];
-const b = a;
-b.push(3);
-console.log(a); // [1,2,3] — одна «коробка»
-```
-
-**Ловушки:**
 - `typeof null === 'object'` — баг языка
-- `NaN !== NaN` → `Number.isNaN(x)`
-- `??` vs `||` — `0` и `''` falsy для `||`, но валидны для `??`
-
-**Файлы:** `dataTypes.js`, `operatorsTypes.js`
+- `??` vs `||` — `0` и `''` falsy для `||`
 
 ---
 
-## Функции
+# DAY 04 — Функции + массивы
+
+## Виды функций
 
 | Вид | Особенность |
 |-----|-------------|
-| Declaration | Hoisting целиком |
+| Declaration | Hoisting |
 | Expression | `const fn = function() {}` |
 | Arrow | Нет своего `this`, нельзя `new` |
-| IIFE | `(function(){})()` — изоляция scope |
-
-**Файл:** `functionsTypes.js`
-
----
 
 ## Массивы
 
-**Мутирующие** (меняют исходный): `push`, `pop`, `splice`, `sort`, `reverse`  
-**Немутирующие:** `map`, `filter`, `reduce`, `slice`, `concat`
+**Мутирующие:** `push`, `splice`, `sort`  
+**Немутирующие:** `map`, `filter`, `reduce`, `slice`
 
 ```js
-const doubled = [1, 2, 3].map(x => x * 2); // [2,4,6]
-const sum = [1, 2, 3].reduce((acc, x) => acc + x, 0); // 6
+[1, 2, 3].map(x => x * 2);
+[1, 2, 3].reduce((acc, x) => acc + x, 0);
 ```
 
-**some** — хотя бы один прошёл тест. **every** — все прошли.
-
-**Файлы:** `arrayMethods.js`
+В React — prefer non-mutating.
 
 ---
 
-## Деструктуризация
+# DAY 05 — Destructuring + строки
 
 ```js
 const { name, age = 18, ...rest } = user;
 const [first, , third] = arr;
+const merged = { ...defaults, ...patch };
 ```
 
-**Файл:** `distructure.js`
+**Строки:** `slice`, `split`, `includes`, template literals — см. `stringsMethods.js`
+
+**Практика:** `practice/tasks-js/findVowels.js`
 
 ---
 
-# DAY 04 — Memory + Reflow + Collections
+# DAY 06 — Memory + immutability
 
-## Memory leaks — «забыл выключить»
+## Memory leaks
 
-| Причина | Жизнь | Fix |
-|---------|-------|-----|
-| Listener без remove | Радио включено | `removeEventListener` / AbortController |
-| setInterval без clear | Кран капает | `clearInterval` в cleanup |
-| WebSocket без close | Звонок не положил | `return () => ws.close()` |
-| Detached DOM | Держишь ссылку на удалённый элемент | `ref = null` |
+| Причина | Fix |
+|---------|-----|
+| Listener без remove | cleanup / AbortController |
+| setInterval без clear | `clearInterval` |
+| Detached DOM | `ref = null` |
 
-**React:** всегда cleanup в `useEffect`:
-```jsx
-useEffect(() => {
-  window.addEventListener('scroll', handler);
-  return () => window.removeEventListener('scroll', handler);
-}, []);
-```
+**React:** cleanup в `useEffect`.
 
-**Файл:** `memoryLeaks.js`
-
----
-
-## Reflow / Paint / Composite — база
-
-1. **Layout (Reflow)** — переставить мебель (width, height)
-2. **Paint** — перекрасить стены (color)
-3. **Composite** — сдвинуть наклейку на GPU (transform, opacity)
-
-`left/top` для анимации = дорого. `transform` = дёшево.
-
-*Senior углубление:* DAY 16, `reflowRepaint.md`
-
-**Файл:** `renderingPipeline.js`
-
----
-
-## Map / Set / WeakMap / WeakSet
-
-**Map** — словарь, любые ключи, `.size`  
-*Жизнь:* телефонная книга с быстрым поиском.
-
-**Set** — уникальные значения  
-*Жизнь:* список гостей без дубликатов.
+## Immutability
 
 ```js
-const unique = [...new Set([1, 1, 2, 3])]; // [1, 2, 3]
+const next = { ...user, name: 'Петя' };           // shallow
+const copy = structuredClone(deepObject);          // deep
 ```
 
-**WeakMap/WeakSet** — слабые ссылки, GC может собрать. Для кэша DOM без утечек.
-
-**Файл:** `arrayMapSetWeakMapWeakSet.js`
+Не мутируй state: `[...items, newItem]`, не `items.push()`.
 
 ---
 
-## Иммутабельность
+# DAY 07 — Map/Set + Rendering pipeline
+
+**Map** — словарь, любые ключи. **Set** — уникальные значения.
 
 ```js
-const next = { ...user, name: 'Петя' };        // shallow copy
-const copy = structuredClone(deepObject);       // deep copy
-Object.freeze(obj);                             // shallow readonly
+const unique = [...new Set([1, 1, 2, 3])];
 ```
 
-React: не мутируй state — `{ ...state, items: [...state.items, newItem] }`
+## Pipeline — как браузер рисует
 
-**Файлы:** `immutability.js`, `structuredCloneSomeArrAt.js`
+```
+Parse → Style → Layout → Paint → Composite
+```
+
+*База.* Углубление reflow — **DAY 08** (skim) и **DAY 27** (DevTools).
 
 ---
 
-# DAY 05 — Повторение + EventEmitter
+# DAY 08 — Reflow / Repaint (база)
 
-## EventEmitter — паттерн pub/sub
+→ Полная версия: **`reflowRepaint.md`**
 
-```js
-// Упрощённо:
-emitter.on('click', handler);
-emitter.emit('click', data);
-emitter.off('click', handler);
-```
+| Шаг | Что | Триггеры |
+|-----|-----|----------|
+| **Layout (Reflow)** | Геометрия | width, height, DOM insert |
+| **Paint** | Цвет, тень | background, color |
+| **Composite** | GPU | transform, opacity |
 
-*Жизнь:* подписка на рассылку — отписался, когда ушёл.
+`left` для анимации — дорого. `transform` — дешевле.
 
-**Hand coding:** `practice/handCoding/eventEmitter.js`
+**Практика:** `practice/tasks-js/myFilter.js`, `isPalindrome.js`
+
+> `renderingPipeline.js` уже на DAY 07 — **не путай** с reflow-md.
 
 ---
 
-## Чеклист недели 1 — объясни вслух
+# DAY 09 — Hand coding (закрепление)
 
-- [ ] article vs section, flex vs grid
+Без новой теории. Цель:
+
+1. `practice/handCoding/eventEmitter.js` — **без AI**
+2. debounce + throttle **из памяти**
+3. Сверка → `practice/handCoding/solutions/`
+
+Если забыл теорию — один файл из DAY 01–08, не всю неделю.
+
+---
+
+# DAY 10 — Review недели 1 ★
+
+## Marathon — объясни вслух без файлов
+
+### Блок A — Async (DAY 01–02)
 - [ ] Event loop: sync → micro → macro
-- [ ] Promise.all vs allSettled
+- [ ] Promise.all vs allSettled vs race
 - [ ] Closure + debounce vs throttle
-- [ ] this + call/bind
-- [ ] Примитив vs ссылка, ?? vs ||
-- [ ] Mutating vs non-mutating arrays
-- [ ] Memory leak + useEffect cleanup
-- [ ] Reflow vs repaint одним предложением
 
-**Mock:** `node mockInterview/questions.js 1` … `5`
+### Блок B — JS core (DAY 03–05)
+- [ ] this + bind, prototype chain
+- [ ] `??` vs `||`, примитив vs ссылка
+- [ ] map / filter / reduce, destructuring
+
+### Блок C — Browser (DAY 06–08)
+- [ ] 2 причины memory leak + fix
+- [ ] Map vs Object, Set dedupe
+- [ ] Layout → Paint → Composite
+- [ ] Reflow vs transform
+
+## Hand coding из памяти
+
+debounce · throttle · EventEmitter (on + emit)
+
+## Mock
+
+```bash
+node mockInterview/questions.js 10
+node mockInterview/questions.js 1-10   # опционально
+```
 
 ---
 
-## Все файлы недели 1
+## Чеклист «неделя 1–2 закрыта»
 
-| DAY | Темы | Файлы |
-|-----|------|-------|
-| 01 | HTML, event loop | `htmlCssA11y.js`, `metaTags.html`, `browserInternals.js`, `eventLoop.js` |
-| 02 | Promises, closures, debounce | `promiseChain.js`, `promiseObject.js`, `circuitFunction.js`, `debounceThrottle.js` |
-| 03 | this, prototypes, basics | `this.js`, `prototypes.js`, `variables.js`, `functionsTypes.js`, `dataTypes.js`, `operatorsTypes.js`, `arrayMethods.js`, `distructure.js` |
-| 04 | Memory, reflow, Map/Set | `memoryLeaks.js`, `renderingPipeline.js`, `arrayMapSetWeakMapWeakSet.js`, `immutability.js` |
-| 05 | Review, EventEmitter | `handCoding/eventEmitter.js`, переписать debounce/throttle |
+- [ ] DAY 01–09 пройдены по `schedule/DAY_XX.md`
+- [ ] Marathon DAY 10 — 3 блока вслух
+- [ ] Hand coding W1 из памяти или с 1 повтором
+
+**Дальше → `theory/week2/SIMPLE_GUIDE.md` (DAY 11 — TypeScript)**

@@ -1,54 +1,48 @@
-# Неделя 2 — TypeScript + React (DAY 06–10)
+# Неделя 3–4 + Review — TypeScript + React (DAY 11–21)
 
-> Одна неделя = весь TS за день + React глубоко.  
-> Расписание: `schedule/DAY_06` … `DAY_10`  
-> Чекбоксы ниже: самопроверка. На GitHub не кликаются → [Issue «Прогресс»](https://github.com/000Ilya000/interview_topics/issues/new?template=course_progress.md) или Obsidian.
+> Читай **до** `.ts` / `.jsx` файлов.  
+> Расписание: `schedule/DAY_11` … `DAY_21`  
+> TypeScript — **4 дня** (11–14), не один. React — DAY 15–20.
+
+| День | Тема | Файлы |
+|------|------|-------|
+| 11 | TS 1/4: any + guards | `anyTypes.ts`, `typeGuards.ts` |
+| 12 | TS 2/4: utility + generics | `utilityTypes.ts`, `generics.tsx` |
+| 13 | TS 3/4: infer + conditional | `inferTypes.ts`, `conditionalTypes.ts` |
+| 14 | TS 4/4: mapped + .d.ts | `mappedTypes.ts`, `declorations.d.ts`, `declarationMerging.d.ts` |
+| 15 | Reconciliation + Fiber | `reconciliation.jsx`, `fiber.jsx` |
+| 16 | Render cycle + hooks overview | `renderCycle.jsx`, `hooksOverview.jsx` |
+| 17 | useEffect + useMemo | `useEffectUseLayoutEffect.jsx`, `useMemoUseCallback.jsx` |
+| 18 | Extra renders + useDebounce | `extraRenders.jsx` → `useDebounce.jsx` ✍️ |
+| 19 | Context + Concurrent | `context.jsx`, `concurrentFeatures.jsx` |
+| 20 | Patterns + state mgmt | `advancedPatterns.jsx`, `stateManagement.jsx` → `miniStateManager.js` ✍️ |
+| 21 | **Review W2** | marathon + `testScreen_1.js` + mock 11–21 |
 
 ---
 
-# DAY 06 — TypeScript (весь блок за один день)
+# DAY 11 — TS 1/4: any, unknown, type guards
 
-TypeScript = **JavaScript + проверка типов до запуска**. Ошибки ловишь в редакторе, не в проде.
-
-## any vs unknown vs never
+TypeScript = JS + проверка типов **до** запуска.
 
 ```ts
 let a: any = 'hello';
-a.foo(); // TS молчит — 💣 в runtime
+a.foo(); // TS молчит — 💣
 
 let b: unknown = 'hello';
-// b.toUpperCase(); // ❌
 if (typeof b === 'string') b.toUpperCase(); // ✅
 
-function die(): never {
-  throw new Error('упало');
-}
+function die(): never { throw new Error(); }
 ```
 
-| | Простыми словами |
-|---|------------------|
+| | Жизнь |
+|---|-------|
 | `any` | «Мне плевать» — TS выключен |
-| `unknown` | «Не знаю — проверь сначала» |
-| `never` | «Сюда код не дойдёт» (throw, бесконечный цикл) |
+| `unknown` | «Проверь сначала» |
+| `never` | «Сюда код не дойдёт» |
 
-*Жизнь:* `any` — коробка без маркировки. `unknown` — «открой и проверь содержимое».
-
-**Файл:** `anyTypes.ts`
-
----
-
-## Type Guards — «сузить тип»
+## Type guards
 
 ```ts
-function print(val: string | number) {
-  if (typeof val === 'string') {
-    console.log(val.toUpperCase()); // TS знает: string
-  } else {
-    console.log(val.toFixed(2));      // TS знает: number
-  }
-}
-
-// Custom guard:
 function isUser(x: unknown): x is User {
   return typeof x === 'object' && x !== null && 'id' in x;
 }
@@ -56,358 +50,222 @@ function isUser(x: unknown): x is User {
 
 Способы: `typeof`, `instanceof`, `'key' in obj`, `x is Type`
 
-**Файл:** `typeGuards.ts`
-
 ---
 
-## Generics — «шаблон типа»
+# DAY 12 — TS 2/4: utility types + generics
 
 ```ts
-function first<T>(arr: T[]): T {
-  return arr[0];
-}
+type UserPreview = Pick<User, 'id' | 'name'>;
+type UpdateUser = Partial<Omit<User, 'id'>>;
 
-interface ApiResponse<T> {
-  data: T;
-  status: number;
-}
-
-type UserResponse = ApiResponse<User>;
-```
-
-*Жизнь:* форма «укажи тип» — работает для User, Product, Order.
-
-```tsx
-function List<T>({ items, render }: { items: T[]; render: (item: T) => ReactNode }) {
-  return items.map(render);
-}
-```
-
-**Файл:** `generics.tsx`
-
----
-
-## Utility Types — готовые трансформации
-
-```ts
-interface User {
-  id: number;
-  name: string;
-  email: string;
-}
-
-type PartialUser = Partial<User>;       // все поля ?
-type RequiredUser = Required<User>;       // все обязательны
-type UserPreview = Pick<User, 'id' | 'name'>;  // только id, name
-type UserWithoutEmail = Omit<User, 'email'>;
-type ReadonlyUser = Readonly<User>;
-
-type Roles = 'admin' | 'user';
-const perms: Record<Roles, boolean> = { admin: true, user: false };
-
-type UserFn = () => User;
-type UserReturn = ReturnType<UserFn>; // User
+interface ApiResponse<T> { data: T; status: number; }
 ```
 
 | Utility | Жизнь |
 |---------|-------|
-| `Partial` | Черновик формы — поля необязательны |
-| `Pick` | Покажи только имя и фото из паспорта |
+| `Partial` | Черновик формы |
+| `Pick` | Только нужные поля |
 | `Omit` | Всё кроме пароля |
-| `Record` | Таблица: роль → права |
+| `Record` | Роль → права |
 
-**Файл:** `utilityTypes.ts`
+**Generics:** `function first<T>(arr: T[]): T`
+
+**Практика:** `DeepPartial<T>` на бумаге
 
 ---
 
-## infer + Conditional + Mapped (Senior TS)
+# DAY 13 — TS 3/4: infer + conditional types
 
-**Conditional:** `T extends U ? X : Y`
 ```ts
 type IsString<T> = T extends string ? true : false;
-type NonNullable<T> = T extends null | undefined ? never : T;
-```
 
-**infer** — «вытащи тип изнутри»:
-```ts
 type ElementType<T> = T extends (infer U)[] ? U : never;
 type Return<T> = T extends (...args: never[]) => infer R ? R : never;
 ```
 
-**Mapped:** `{ [K in keyof T]: T[K] }`
-
-*Жизнь:* conditional — «если T строка — да, иначе нет». infer — «достань тип из Promise».
-
-**Файлы:** `inferTypes.ts`, `conditionalTypes.ts`, `mappedTypes.ts`
+**infer** — «вытащи тип изнутри».  
+**Conditional** — `T extends U ? X : Y`
 
 ---
 
-## *.d.ts — типы без кода
+# DAY 14 — TS 4/4: mapped types + declarations
 
 ```ts
-// types/api.d.ts
+type ReadonlyUser = { readonly [K in keyof User]: User[K] };
+```
+
+**`.d.ts`** — типы без JS-кода для библиотек:
+
+```ts
 declare module 'legacy-lib' {
   export function doThing(x: string): void;
 }
 ```
 
-Нужно для JS-библиотек без типов.
+**declarationMerging** — когда interface дополняется.
 
-**Файл:** `declorations.d.ts`
+## Чеклист — TS блок закрыт
 
----
-
-## Чеклист TS — объясни вслух
-
-- [ ] any vs unknown
-- [ ] Type guard `x is User`
-- [ ] Generic `<T>` на примере
-- [ ] Pick vs Omit
-- [ ] Зачем infer
+- [ ] any vs unknown vs never
+- [ ] Pick / Omit / Partial + generic
+- [ ] infer + ReturnType
+- [ ] mapped types + зачем .d.ts
 
 ---
 
-# DAY 07 — Reconciliation + Fiber + Render Cycle
+# DAY 15 — Reconciliation + Fiber
 
-## Virtual DOM + Reconciliation
+React держит **Virtual DOM**. При update: новое дерево → diff → patch real DOM.
 
-React держит **дерево UI в памяти** (Virtual DOM). При изменении state:
-
-1. Строит **новое** дерево
-2. **Сравнивает** со старым (diff)
-3. Меняет **только** отличия в real DOM
-
-*Жизнь:* список покупок изменился — переписываешь только изменённые строки, не всю тетрадь.
-
-### key — номерок на элементе
+### key
 
 ```jsx
-// ❌ Плохо — index как key при delete/reorder
-{items.map((item, i) => <Row key={i} item={item} />)}
-
-// ✅ Хорошо — stable id
-{items.map(item => <Row key={item.id} item={item} />)}
+// ❌ index при delete/reorder
+{items.map((item, i) => <Row key={i} />)}
+// ✅ stable id
+{items.map(item => <Row key={item.id} />)}
 ```
 
-Удалил первый элемент с index key — React думает, что **все** строки изменились. State «переедет» не туда.
+## Fiber
 
-**Файл:** `reconciliation.jsx`
+Render — можно прервать. Commit — нельзя.  
+*Жизнь:* уборка по комнатам, между комнатами — ответил на клик.
 
 ---
 
-## Fiber — React может прерваться
-
-**Старая React:** рендерил всё разом → UI замирал на тяжёлой странице.
-
-**Fiber:** разбил работу на **кусочки**. Между кусочками — браузер обрабатывает клики.
-
-Две фазы:
-- **Render** — можно прервать (посчитать diff)
-- **Commit** — нельзя прервать (записать в DOM)
-
-*Жизнь:* уборка по одной комнате. Между комнатами — ответил на звонок.
-
-**Файл:** `fiber.jsx`
-
----
-
-## Render Cycle — порядок
+# DAY 16 — Render cycle + hooks overview
 
 ```
-setState / props change
-  → Render (вызов компонента, hooks)
-  → Reconciliation (diff)
-  → Commit (DOM update)
-  → useLayoutEffect (sync, до paint)
+setState → Render → Reconciliation → Commit
+  → useLayoutEffect (до paint)
   → browser paint
-  → useEffect (async, после paint)
+  → useEffect (после paint)
 ```
 
-**Файл:** `renderCycle.jsx`
+| Hook | Зачем |
+|------|-------|
+| `useState` | State + rerender |
+| `useEffect` | Side effects после paint |
+| `useLayoutEffect` | DOM measure до paint |
+| `useRef` | Без rerender |
+| `useMemo` / `useCallback` | Memoization |
+| `useContext` | Context |
+
+**Правила hooks:** только top-level, только в React-функциях.
 
 ---
 
-# DAY 08 — Hooks + Memo + Extra Renders
-
-## Все hooks — шпаргалка
-
-| Hook | Простыми словами |
-|------|------------------|
-| `useState` | Переменная, при изменении — ререндер |
-| `useReducer` | useState для сложной логики (reducer) |
-| `useEffect` | Side effect **после** paint (fetch, подписки) |
-| `useLayoutEffect` | Side effect **до** paint (измерения DOM) |
-| `useRef` | Коробка без ререндера (DOM ref, prev value) |
-| `useMemo` | Запомнить результат вычисления |
-| `useCallback` | Запомнить функцию |
-| `useContext` | Прочитать context |
-| `useId` | Стабильный id (SSR-safe) |
-
-**Правила hooks:**
-1. Только на **верхнем уровне** (не в if)
-2. Только в React-функциях
-
-**Файл:** `hooksOverview.jsx`
-
----
-
-## useEffect vs useLayoutEffect
+# DAY 17 — useEffect + useMemo / useCallback
 
 ```jsx
-// Fetch — useEffect (не блокируем UI)
+// Fetch — useEffect
 useEffect(() => {
   fetch('/api').then(setData);
+  return () => controller.abort();
 }, []);
 
-// Измерить высоту блока — useLayoutEffect (до paint)
-useLayoutEffect(() => {
-  setHeight(ref.current.offsetHeight);
-}, []);
+// Measure — useLayoutEffect
+useLayoutEffect(() => setHeight(ref.current.offsetHeight), []);
 ```
 
-*Жизнь:* useEffect — повесил картину, гость уже в комнате. useLayoutEffect — поправил рамку **до** входа гостя.
-
-**Файл:** `useEffectUseLayoutEffect.jsx`
+**useMemo / useCallback** — только когда Profiler показал проблему. Не «на всякий случай».
 
 ---
 
-## useMemo / useCallback — не «на всякий случай»
+# DAY 18 — Лишние рендеры + useDebounce
 
-```jsx
-const sorted = useMemo(() => heavySort(items), [items]);
+**Причины rerender:**
+1. Parent rerender → children
+2. Новый object/array в props каждый render
+3. Fat Context
+4. setState в render body
 
-const handleClick = useCallback(() => {
-  doThing(id);
-}, [id]);
-
-const MemoChild = React.memo(Child);
-// MemoChild ререндерится только если props по ссылке те же
-```
-
-**Когда нужно:** Profiler показал лишний рендер + тяжёлый child или вычисление.
-
-**Когда НЕ нужно:** «на всякий случай» — сами добавляют overhead.
-
-**Файл:** `useMemoUseCallback.jsx`
-
----
-
-## Лишние рендеры — найти и fix
-
-**Причины:**
-1. Parent rerender → children тоже (default)
-2. `style={{ color: 'red' }}` — **новый объект** каждый render
-3. Context изменился → все consumers
-4. `setState` в render body → бесконечный цикл
-
-**Как найти:** React DevTools → Profiler → record → «Why did this render?»
-
-**Fix:** `React.memo`, `useMemo`, `useCallback`, split context, поднять state ближе к месту использования.
-
-**Файл:** `extraRenders.jsx`
+**Fix:** `React.memo`, split context, `useMemo`, поднять state.
 
 **Hand coding:** `practice/handCoding/useDebounce.jsx`
 
 ---
 
-# DAY 09 — Context + Concurrent + Patterns
-
-## Context
+# DAY 19 — Context + Concurrent
 
 ```jsx
-const ThemeContext = createContext('light');
-
-function App() {
-  const [theme, setTheme] = useState('light');
-  return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
-      <Page />
-    </ThemeContext.Provider>
-  );
-}
+// ❌ новый объект каждый render
+<Ctx.Provider value={{ theme, setTheme }}>
 ```
 
-⚠️ `value={{ theme, setTheme }}` — **новый объект** каждый render → все consumers ререндерятся.
+**Fix:** split contexts или `useMemo` для value.
 
-**Fix:** `useMemo(() => ({ theme, setTheme }), [theme])` или split contexts.
-
-**Файл:** `context.jsx`
+**useTransition** — срочный input vs отложенный тяжёлый filter.  
+**useDeferredValue** — показать старое, пока считается новое.
 
 ---
 
-## Concurrent — useTransition, useDeferredValue
+# DAY 20 — Patterns + State management
 
-```jsx
-const [isPending, startTransition] = useTransition();
+| Паттерн | Зачем |
+|---------|-------|
+| Error Boundary | Fallback при ошибке render |
+| Portal | Модалка в `document.body` |
+| lazy + Suspense | Code split компонента |
 
-const handleChange = (e) => {
-  setInput(e.target.value);              // срочно — input отзывчив
-  startTransition(() => {
-    setFilter(e.target.value);           // можно подождать — тяжёлый список
-  });
-};
-```
+## State — куда класть
 
-*Жизнь:* печатаешь в поиске — буквы появляются сразу, фильтрация списка — «когда успеет».
+| Данные | Где |
+|--------|-----|
+| API / server | **TanStack Query** |
+| UI toggle, форма | `useState` |
+| Global UI (cart, theme) | **Zustand** |
+| Сложная client logic | **Redux/RTK** |
 
-**Файл:** `concurrentFeatures.jsx`
-
----
-
-## Error Boundaries, Portals, Lazy
-
-**Error Boundary** — ловит ошибку рендера, показывает fallback:
-```jsx
-// Только class или react-error-boundary
-// Не ловит: event handlers, async, SSR
-```
-
-**Portal** — модалка рендерится в `document.body`, но логически в React tree:
-```jsx
-createPortal(<Modal />, document.getElementById('modal-root'));
-```
-
-**Lazy + Suspense** — code splitting:
-```jsx
-const Page = lazy(() => import('./Page'));
-<Suspense fallback={<Spinner />}><Page /></Suspense>
-```
-
-**Файл:** `advancedPatterns.jsx`
+**Senior:** не клади fetch в Redux — для этого Query.
 
 **Hand coding:** `practice/handCoding/miniStateManager.js`
 
 ---
 
-# DAY 10 — Повторение недели 2
+# DAY 21 — Review недели 2 ★
 
-## Чеклист — объясни вслух
+## Marathon — объясни вслух
 
-- [ ] any vs unknown vs never
-- [ ] Pick, Omit, Partial
-- [ ] Generic на примере компонента
-- [ ] Зачем key, почему не index
-- [ ] Render vs Commit phase
-- [ ] useEffect vs useLayoutEffect
-- [ ] 3 причины лишнего рендера
-- [ ] Когда useMemo реально нужен
-- [ ] Context — почему все ререндерятся
-- [ ] useTransition — зачем
+### Блок A — TypeScript (DAY 11–14)
+- [ ] any vs unknown
+- [ ] Pick / Omit / Partial
+- [ ] Generic `ApiResponse<T>`
+- [ ] infer + ReturnType
+- [ ] mapped types + .d.ts
 
-**Практика:** `practice/tasks-react/`, useDebounce + miniStateManager из памяти
+### Блок B — React core (DAY 15–17)
+- [ ] Reconciliation + key=index problem
+- [ ] Render vs Commit vs useEffect
+- [ ] useLayoutEffect — 1 use case
+- [ ] useMemo когда **не** нужен
 
-**Mock:** `node mockInterview/questions.js 6` … `10`
+### Блок C — React advanced (DAY 18–20)
+- [ ] 3 причины лишнего rerender
+- [ ] Context split fix
+- [ ] Error Boundary limits
+- [ ] Query vs Zustand vs Redux
+
+## Практика
+
+`practice/tasks-react/testScreen_1.js` — ответы вслух/письменно  
+useDebounce + miniStateManager — 5 мин из памяти
+
+## Mock
+
+```bash
+node mockInterview/questions.js 21
+node mockInterview/questions.js 11-21   # опционально
+```
 
 ---
 
-## Все файлы недели 2
+## Чеклист «TS + React закрыты»
 
-| DAY | Темы | Файлы |
-|-----|------|-------|
-| 06 | TypeScript | `anyTypes.ts`, `typeGuards.ts`, `generics.tsx`, `utilityTypes.ts`, `inferTypes.ts`, `conditionalTypes.ts`, `mappedTypes.ts`, `declorations.d.ts` |
-| 07 | Reconciliation, Fiber | `reconciliation.jsx`, `fiber.jsx`, `renderCycle.jsx` |
-| 08 | Hooks, memo | `hooksOverview.jsx`, `useEffectUseLayoutEffect.jsx`, `useMemoUseCallback.jsx`, `extraRenders.jsx` |
-| 09 | Context, Concurrent | `context.jsx`, `concurrentFeatures.jsx`, `advancedPatterns.jsx` |
-| 10 | Review | `smthTasks.jsx`, `tasks-react/` |
+- [ ] DAY 11–20 по schedule
+- [ ] Marathon DAY 21 — 3 блока
+- [ ] testScreen_1 пройден
 
-**A11y модалки (неделя 4):** `accessibleComponents.md`
+**Дальше → `theory/week3/SIMPLE_GUIDE.md` (DAY 22 — Next.js)**
+
+**A11y (модалки) — подробно в `theory/week4/SIMPLE_GUIDE.md` DAY 28**
